@@ -133,7 +133,7 @@ run_half_sim() {
 		fi
 
 		# SSH and tmux session configuration
-		ssh -t "nv@$ip" "
+		ssh -t "nvidia@$ip" "
 				tmux list-sessions &> /dev/null && tmux kill-session -a
         tmux new-session -d -s $name
 				tmux split-window -h -p 50
@@ -172,7 +172,7 @@ kill_vins() {
 		fi
 
 		# SSH and tmux session configuration
-		ssh -t "nv@$ip" "
+		ssh -t "nvidia@$ip" "
 					tmux send-keys -t $name:1.1 C-c C-m
 					tmux send-keys -t $name:1.2 C-c C-m
 					echo '[$name] Program Killed]'
@@ -190,7 +190,7 @@ kill_sessions() {
 		group=${working_groups[$i]}
 
 		# SSH and tmux session configuration
-		ssh -t "nv@$ip" "
+		ssh -t "nvidia@$ip" "
 				tmux kill-session -t $name
 				echo '[$name] Killed all sessions.'
         exit;
@@ -208,9 +208,9 @@ shutdown_all() {
 		group=${working_groups[$i]}
 
 		# SSH and tmux session configuration
-		ssh -t "nv@$ip" "
+		ssh -t "nvidia@$ip" "
 				echo '[$name] Shutting down...'
-				echo 'nv' | sudo -S shutdown now 
+				echo 'nvidia' | sudo -S shutdown now 
         exit;
     	"
 	done

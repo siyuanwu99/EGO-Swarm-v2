@@ -60,25 +60,25 @@ send_topics:
 recv_topics:
   - topic_name: /broadcast_traj_to_planner
     msg_type: traj_utils/MINCOTraj
-    srcIP: gcs
+    srcIP: gcs2
     srcPort: 3200
 
   - topic_name: /joystick_from_bridge
     msg_type: sensor_msgs/Joy
-    srcIP: gcs
+    srcIP: gcs2
     srcPort: 3201
 
   - topic_name: /traj_start_trigger 
     msg_type: geometry_msgs/PoseStamped
-    srcIP: gcs
+    srcIP: gcs2
     srcPort: 3202
 
   - topic_name: odometry
     msg_type: nav_msgs/Odometry
-    srcIP: gcs
+    srcIP: gcs2
     srcPort: 3210
 
   - topic_name: /pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
-    srcIP: gcs
+    srcIP: gcs2
     srcPort: 3220
