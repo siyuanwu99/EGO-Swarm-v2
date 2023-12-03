@@ -133,21 +133,17 @@ run_half_sim() {
 		fi
 
 		# SSH and tmux session configuration
-		ssh -t "nv@$ip" "
+		ssh -t "nvidia@$ip" "
 				tmux list-sessions &> /dev/null && tmux kill-session -a
         tmux new-session -d -s $name
 				tmux split-window -h -p 50
-				tmux select-pane -t 1
-				tmux split-window -v -p 75
-				tmux select-pane -t 3
-				tmux split-window -v -p 80
 
 				for pane in {1..4}; do
-    				tmux send-keys -t $name:1.\$pane 'cd ~/ego_swarm_ws && source setup.bash' C-m
+    				tmux send-keys -t $name:1.\$pane 'cd ~/ego_swarm_ws && source devel/setup.bash' C-m
 				done
 
 				tmux send-keys -t $name:1.1 'roslaunch swarm_ros_bridge onboard_bridge.launch config:=semi_sim_swarm_drone.yaml' C-m
-				tmux send-keys -t $name:1.2 'roslaunch ego_planner semi_sim_run_onboard.launch' C-m
+				tmux send-keys -t $name:1.2 'sleep 3 && roslaunch ego_planner semi_sim_run_onboard.launch' C-m
 
 				echo '[$name] Initialized.'
 
@@ -172,7 +168,7 @@ kill_vins() {
 		fi
 
 		# SSH and tmux session configuration
-		ssh -t "nv@$ip" "
+		ssh -t "nvidia@$ip" "
 					tmux send-keys -t $name:1.1 C-c C-m
 					tmux send-keys -t $name:1.2 C-c C-m
 					echo '[$name] Program Killed]'
@@ -190,7 +186,7 @@ kill_sessions() {
 		group=${working_groups[$i]}
 
 		# SSH and tmux session configuration
-		ssh -t "nv@$ip" "
+		ssh -t "nvidia@$ip" "
 				tmux kill-session -t $name
 				echo '[$name] Killed all sessions.'
         exit;
@@ -208,7 +204,7 @@ shutdown_all() {
 		group=${working_groups[$i]}
 
 		# SSH and tmux session configuration
-		ssh -t "nv@$ip" "
+		ssh -t "nvidia@$ip" "
 				echo '[$name] Shutting down...'
 				echo 'nv' | sudo -S shutdown now 
         exit;
