@@ -1,0 +1,71 @@
+<launch>
+    <!-- size of map, change the size inflate x, y, z according to your application -->
+    <arg name="drone_id" value="0"/>
+    <arg name="init_x" value="-15.0"/>
+    <arg name="init_y" value="-9.0"/>
+    <arg name="init_z" value="0.1"/>
+    <arg name="map_size_x" value="50.0"/>
+    <arg name="map_size_y" value="50.0"/>
+    <arg name="map_size_z" value=" 3.0"/>
+    <arg name="flight_type" value="2"/>
+    <arg name="point_num" value="1"/>
+    <arg name="target0_x" default="15.0"/>
+    <arg name="target0_y" default="9.0"/>
+    <arg name="target0_z" default="1"/>
+    <!-- topic of your odometry such as VIO or LIO -->
+    <arg name="odom_topic" default="odometry"/>
+
+    <!-- main algorithm params -->
+    <include file="$(find ego_planner)/launch/include/semi_sim_advanced_param.xml">
+        <arg name="drone_id" value="$(arg drone_id)"/>
+        <arg name="map_size_x_" value="$(arg map_size_x)"/>
+        <arg name="map_size_y_" value="$(arg map_size_y)"/>
+        <arg name="map_size_z_" value="$(arg map_size_z)"/>
+        <arg name="odometry_topic" value="$(arg odom_topic)"/>
+        <!-- camera pose: transform of camera frame in the world frame -->
+        <!-- depth topic: depth image, 640x480 by default -->
+        <!-- don't set cloud_topic if you already set these ones! -->
+        <arg name="camera_pose_topic" value="pcl_render_node/camera_pose"/>
+        <arg name="depth_topic" value="pcl_render_node/depth"/>
+        <!-- topic of point cloud measurement, such as from LIDAR  -->
+        <!-- don't set camera pose and depth, if you already set this one! -->
+        <arg name="cloud_topic" value="pcl_render_node/cloud"/>
+        <!-- intrinsic params of the depth camera -->
+        <arg name="cx" value="321.04638671875"/>
+        <arg name="cy" value="243.44969177246094"/>
+        <arg name="fx" value="387.229248046875"/>
+        <arg name="fy" value="387.229248046875"/>
+        <!-- maximum velocity, acceleration and jerk the drone will reach -->
+        <arg name="max_vel" value="1.5" />
+        <arg name="max_acc" value="6.0" />
+        <arg name="max_jer" value="20.0" />
+        <!--always set to 1.5 times grater than sensing horizen-->
+        <arg name="planning_horizon" value="7.5" />
+        <arg name="use_multitopology_trajs" value="false" />
+        <!-- 1: use 2D Nav Goal to select goal  -->
+        <!-- 2: use global waypoints below  -->
+        <arg name="flight_type" value="$(arg flight_type)" />
+        <!-- global waypoints -->
+        <!-- It generates a piecewise min-snap traj passing all waypoints -->
+        <arg name="point_num" value="$(arg point_num)" />
+        <arg name="point0_x" value="$(arg target0_x)" />
+        <arg name="point0_y" value="$(arg target0_y)" />
+        <arg name="point0_z" value="$(arg target0_z)" />
+        
+    </include>
+
+    <!-- trajectory server -->
+    <node pkg="ego_planner" name="traj_server" type="traj_server" output="screen">
+        <remap from="/position_cmd" to="planning/pos_cmd"/>
+        <remap from="~planning/trajectory" to="planning/trajectory"/>
+        <param name="traj_server/time_forward" value="1.0" type="double"/>
+    </node>
+    
+    <include file="$(find manual_take_over)/launch/semi_sim_take_over_drone.launch">
+        <arg name="drone_id" value="$(arg drone_id)"/>
+        <arg name="cmd_topic" value="planning/pos_cmd"/>
+    </include>
+
+</launch>
+
+    

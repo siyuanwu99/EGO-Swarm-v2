@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="config" default="swarm_gcs.yaml" />
+
+  <node pkg="swarm_ros_bridge" type="bridge_node" name="gcs_bridge_node" output="screen" >
+    <rosparam command="load" file="$(find swarm_ros_bridge)/config/$(arg config)" />
+  </node>
+
+  <!-- <include file="$(find odom_visualization)/launch/odom_visualization.launch"> -->
+  <!-- </include> -->
+  <!---->
+  <!-- <node pkg="traj_opt" name="color_traj" type="color_traj"> -->
+  <!--   <remap from="~bezier_traj" to="/broadcast_traj" /> -->
+  <!--   <remap from="~color_traj" to="/color_traj" /> -->
+  <!--   <param name="max_vel" value="2.5" /> -->
+  <!-- </node> -->
+  <!---->
+  <!-- <node pkg="traj_opt" name="drone1_color_traj" type="color_traj"> -->
+  <!--   <remap from="~bezier_traj" to="/drone1/planner/trajectory" /> -->
+  <!--   <remap from="~color_traj" to="/drone1/planner/color_traj" /> -->
+  <!--   <param name="max_vel" value="2.5" /> -->
+  <!-- </node> -->
+  <!-- <node pkg="traj_opt" name="drone2_color_traj" type="color_traj"> -->
+  <!--   <remap from="~bezier_traj" to="/drone2/planner/trajectory" /> -->
+  <!--   <remap from="~color_traj" to="/drone2/planner/color_traj" /> -->
+  <!--   <param name="max_vel" value="2.5" /> -->
+  <!-- </node> -->
+  <!-- <node pkg="traj_opt" name="drone3_color_traj" type="color_traj"> -->
+  <!--   <remap from="~bezier_traj" to="/drone3/planner/trajectory" /> -->
+  <!--   <remap from="~color_traj" to="/drone3/planner/color_traj" /> -->
+  <!--   <param name="max_vel" value="2.5" /> -->
+  <!-- </node> -->
+  <!---->
+  <!-- <node name="tf2_ros" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 1 world map" /> -->
+  <!---->
+  <!---->
+  <!-- <node name="gcs_rviz" pkg="rviz" type="rviz" output="log" args="-d $(find swarm_ros_bridge)/launch/gcs.rviz" /> -->
+
+</launch>
