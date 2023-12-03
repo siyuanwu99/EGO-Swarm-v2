@@ -206,7 +206,7 @@ shutdown_all() {
 		# SSH and tmux session configuration
 		ssh -t "nvidia@$ip" "
 				echo '[$name] Shutting down...'
-				echo 'nv' | sudo -S shutdown now 
+				echo 'nvidia' | sudo -S shutdown now 
         exit;
     	"
 	done
