@@ -10,16 +10,18 @@ IP:
   self: "*" # '*' stands for all self IPs
   gcs: 192.168.101.138
   gcs2: 192.168.101.10
-  drone1: 192.168.101.151
-  drone2: 192.168.101.152
-  drone3: 192.168.101.153
-  drone4: 192.168.101.154
+  drone6: 192.168.101.151
+  drone7: 192.168.101.152
+  drone8: 192.168.101.153
+  drone9: 192.168.101.154
+
   drone5: 192.168.101.155
 
-  drone6: 192.168.101.57
-  drone7: 192.168.101.58
-  drone8: 192.168.101.62
-  drone9: 192.168.101.64
+  drone1: 192.168.101.57
+  drone2: 192.168.101.58
+  drone3: 192.168.101.62
+  drone4: 192.168.101.64
+
   drone10: 192.168.101.65
 
   neighbor: 127.0.0.1 # modify to the IP of other machines
@@ -91,7 +93,6 @@ send_topics:
     srcIP: self
     srcPort: 3219
     max_freq: 10
-
 
 ####### receive these ROS messages from remote robots #######
 ## if no recv_topics needed, comment all these out
