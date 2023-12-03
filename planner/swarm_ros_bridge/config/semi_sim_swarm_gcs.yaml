@@ -94,6 +94,57 @@ send_topics:
     srcPort: 3219
     max_freq: 10
 
+  - topic_name: /qual_1/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3220
+    max_freq: 20
+  - topic_name: /qual_2/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3221
+    max_freq: 20
+  - topic_name: /qual_3/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3222
+    max_freq: 20
+  - topic_name: /qual_4/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3223
+    max_freq: 20
+  - topic_name: /qual_5/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3224
+    max_freq: 20
+  - topic_name: /qual_6/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3225
+    max_freq: 20
+  - topic_name: /qual_7/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3226
+    max_freq: 20
+  - topic_name: /qual_8/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3227
+    max_freq: 20
+  - topic_name: /qual_9/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3228
+    max_freq: 20
+  - topic_name: /qual_10/pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: self
+    srcPort: 3229
+    max_freq: 20
+
 ####### receive these ROS messages from remote robots #######
 ## if no recv_topics needed, comment all these out
 recv_topics:
@@ -221,43 +272,43 @@ recv_topics:
     srcIP: drone10
     srcPort: 3003
 
-  - topic_name: /quad_1/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone1
-    srcPort: 3004
-  - topic_name: /quad_2/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone2
-    srcPort: 3004
-  - topic_name: /quad_3/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone3
-    srcPort: 3004
-  - topic_name: /quad_4/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone4
-    srcPort: 3004
-  - topic_name: /quad_5/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone5
-    srcPort: 3004
-  - topic_name: /quad_6/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone6
-    srcPort: 3004
-  - topic_name: /quad_7/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone7
-    srcPort: 3004
-  - topic_name: /quad_8/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone8
-    srcPort: 3004
-  - topic_name: /quad_9/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone9
-    srcPort: 3004
-  - topic_name: /quad_10/ego_planner_node/grid_map/occupancy_inflate
-    msg_type: visualization_msgs/Marker
-    srcIP: drone10
-    srcPort: 3004
+  # - topic_name: /quad_1/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone1
+  #   srcPort: 3004
+  # - topic_name: /quad_2/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone2
+  #   srcPort: 3004
+  # - topic_name: /quad_3/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone3
+  #   srcPort: 3004
+  # - topic_name: /quad_4/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone4
+  #   srcPort: 3004
+  # - topic_name: /quad_5/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone5
+  #   srcPort: 3004
+  # - topic_name: /quad_6/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone6
+  #   srcPort: 3004
+  # - topic_name: /quad_7/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone7
+  #   srcPort: 3004
+  # - topic_name: /quad_8/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone8
+  #   srcPort: 3004
+  # - topic_name: /quad_9/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone9
+  #   srcPort: 3004
+  # - topic_name: /quad_10/ego_planner_node/grid_map/occupancy_inflate
+  #   msg_type: visualization_msgs/Marker
+  #   srcIP: drone10
+  #   srcPort: 3004

@@ -21,6 +21,7 @@ IP:
   drone2: 192.168.101.58
   drone3: 192.168.101.62
   drone4: 192.168.101.64
+
   drone10: 192.168.101.65
   neighbor: 127.0.0.1 # modify to the IP of other machines
 
@@ -69,5 +70,10 @@ recv_topics:
 
   - topic_name: odometry
     msg_type: nav_msgs/Odometry
+    srcIP: gcs
+    srcPort: 3210
+
+  - topic_name: /pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
     srcIP: gcs
     srcPort: 3210
