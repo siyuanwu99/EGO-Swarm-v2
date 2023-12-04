@@ -25,6 +25,9 @@ declare -a robot_groups
 declare -a working_ips
 declare -a working_names
 declare -a working_groups
+declare -a working_x
+declare -a working_y
+declare -a working_z
 
 # Extracting robot names, IPs, and groups
 ping_robots() {
@@ -88,12 +91,18 @@ load_robots() {
 	working_ips=()
 	working_names=()
 	working_groups=()
+	working_x=()
+	working_y=()
+	working_z=()
 	if [ -f $TEMP_FILE ]; then
 		echo "Loading robots from $TEMP_FILE..."
-		while IFS=, read -r name ip sensor; do
+		while IFS=, read -r name ip sensor x y z; do
 			working_ips+=("$ip")
 			working_names+=("$name")
 			working_groups+=("$sensor")
+			working_x+=("$x")
+			working_y+=("$y")
+			working_z+=("$z")
 		done <"$TEMP_FILE"
 	else
 		echo "File $TEMP_FILE not found! Please run read_robots first."
@@ -103,13 +112,16 @@ load_robots() {
 
 	length=${#working_ips[@]}
 	echo "----- $length Working robots -----"
-	echo "name               ip            sensor"
+	echo "name  ip  sensor     init_pos"
 	echo "------------------------------------"
 	for ((i = 0; i < length; i++)); do
 		name=${working_names[$i]}
 		ip=${working_ips[$i]}
 		group=${working_groups[$i]}
-		echo "$name            $ip            $group"
+		x=${working_x[$i]}
+		y=${working_y[$i]}
+		z=${working_z[$i]}
+		echo "$name $ip $group ($x,$y,$z)"
 	done
 }
 
@@ -120,6 +132,9 @@ run_half_sim() {
 		name=${working_names[$i]}
 		ip=${working_ips[$i]}
 		group=${working_groups[$i]}
+		x=${working_x[$i]}
+		y=${working_y[$i]}
+		z=${working_z[$i]}
 
 		echo "Connecting to $name with sensor $group..."
 
@@ -137,18 +152,20 @@ run_half_sim() {
 				tmux list-sessions &> /dev/null && tmux kill-session -a
         tmux new-session -d -s $name
 				tmux split-window -h -p 50
+				tmux split-window -v -p 50
 
-				for pane in {1..4}; do
+				for pane in {1..3}; do
     				tmux send-keys -t $name:1.\$pane 'cd ~/ego_swarm_ws && source devel/setup.bash' C-m
 				done
 
 				tmux send-keys -t $name:1.1 'roslaunch swarm_ros_bridge onboard_bridge.launch config:=semi_sim_swarm_drone.yaml' C-m
-				tmux send-keys -t $name:1.2 'sleep 3 && roslaunch ego_planner semi_sim_run_onboard.launch' C-m
+				tmux send-keys -t $name:1.2 'sleep 3 && roslaunch ego_planner semi_sim_run_onboard.launch drone_id:=$i init_x:=$x init_y:=$y init_z:=$z' C-m
 
 				echo '[$name] Initialized.'
 
         exit;
     	"
+		ssh -X -t "nvidia@$ip" "gnome-terminal -- tmux attach -t $name"
 		echo "Started tmux session for $name"
 	done
 }
@@ -188,7 +205,9 @@ kill_sessions() {
 		# SSH and tmux session configuration
 		ssh -t "nvidia@$ip" "
 				tmux kill-session -t $name
-				echo '[$name] Killed all sessions.'
+				echo '>> [$name] Killed all sessions.'
+				pkill gnome-terminal
+				echo '>> [$name] Gnome terminal killed.'
         exit;
     	"
 	done
