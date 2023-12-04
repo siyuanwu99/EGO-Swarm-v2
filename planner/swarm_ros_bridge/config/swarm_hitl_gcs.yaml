@@ -1,0 +1,268 @@
+### default supported ROS message types:
+# sensor_msgs/Imu
+# geometry_msgs/Twist
+# std_msgs/String
+# (modify/add in ros_sub_pub.hpp if you need more)
+### max number of send_topics supported: 50
+
+### list all <IPname: IP> here (IPname can be set arbitrarily) ###
+IP:
+  self: "*" # '*' stands for all self IPs
+  gcs: 192.168.101.138
+  gcs2: 192.168.101.10
+  drone1: 192.168.101.151
+  drone2: 192.168.101.152
+  drone3: 192.168.101.153
+  drone4: 192.168.101.154
+  drone5: 192.168.101.155
+  neighbor: 127.0.0.1 # modify to the IP of other machines
+
+####### Send these ROS messages to remote robots #######
+## if no send_topics needed, comment all these out
+## 30xx  drone -> ground station
+## 31xx  drone -> drone
+## 32xx  ground station -> drone
+send_topics:
+  - topic_name: /multi_map_manager/chunk_stamps_send
+    msg_type: plan_env/ChunkStamps
+    srcIP: self
+    srcPort: 3100
+    max_freq: 10
+  - topic_name: /multi_map_manager/chunk_data_send
+    msg_type: plan_env/ChunkData
+    srcIP: self
+    srcPort: 3101
+
+  - topic_name: /quad_1/lidar_slam/odom # replaceable
+    msg_type: nav_msgs/Odometry
+    srcIP: gcs
+    srcPort: 3216
+    max_freq: 100
+  - topic_name: /quad_2/lidar_slam/odom # replaceable
+    msg_type: nav_msgs/Odometry
+    srcIP: gcs
+    srcPort: 3226
+    max_freq: 100
+  - topic_name: /quad_3/lidar_slam/odom # replaceable
+    msg_type: nav_msgs/Odometry
+    srcIP: gcs
+    srcPort: 3236
+    max_freq: 100
+  - topic_name: /quad_4/lidar_slam/odom # replaceable
+    msg_type: nav_msgs/Odometry
+    srcIP: gcs
+    srcPort: 3246
+    max_freq: 100
+  - topic_name: /quad_5/lidar_slam/odom # replaceable
+    msg_type: nav_msgs/Odometry
+    srcIP: gcs
+    srcPort: 3256
+    max_freq: 100
+
+  - topic_name: /quad_1/pcl_render_node/cloud # replaceable
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: gcs
+    srcPort: 3217
+    max_freq: 100
+  - topic_name: /quad_2/pcl_render_node/cloud # replaceable
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: gcs
+    srcPort: 3227
+    max_freq: 100
+  - topic_name: /quad_3/pcl_render_node/cloud # replaceable
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: gcs
+    srcPort: 3237
+    max_freq: 100
+  - topic_name: /quad_4/pcl_render_node/cloud # replaceable
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: gcs
+    srcPort: 3247
+    max_freq: 100
+  - topic_name: /quad_5/pcl_render_node/cloud # replaceable
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: gcs
+    srcPort: 3257
+    max_freq: 100
+
+  - topic_name: /quad_1/pcl_render_node/sensor_pose # replaceable
+    msg_type: geometry_msgs/PoseStamped
+    srcIP: gcs
+    srcPort: 3218
+    max_freq: 200
+  - topic_name: /quad_2/pcl_render_node/sensor_pose # replaceable
+    msg_type: geometry_msgs/PoseStamped
+    srcIP: gcs
+    srcPort: 3228
+    max_freq: 200
+  - topic_name: /quad_3/pcl_render_node/sensor_pose # replaceable
+    msg_type: geometry_msgs/PoseStamped
+    srcIP: gcs
+    srcPort: 3238
+    max_freq: 200
+  - topic_name: /quad_4/pcl_render_node/sensor_pose # replaceable
+    msg_type: geometry_msgs/PoseStamped
+    srcIP: gcs
+    srcPort: 3248
+    max_freq: 200
+  - topic_name: /quad_5/pcl_render_node/sensor_pose # replaceable
+    msg_type: geometry_msgs/PoseStamped
+    srcIP: gcs
+    srcPort: 3258
+    max_freq: 200
+
+  - topic_name: /move_base_simple/goal # start trigger
+    msg_type: geometry_msgs/PoseStamped
+    srcIP: gcs
+    srcPort: 3200
+    max_freq: 5
+
+####### receive these ROS messages from remote robots #######
+## if no recv_topics needed, comment all these out
+recv_topics:
+  - topic_name: /multi_map_manager/chunk_stamps_recv
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone1
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_stamps_recv
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone2
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_stamps_recv
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone3
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_stamps_recv
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone4
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_stamps_recv
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone5
+    srcPort: 3100
+
+  - topic_name: /multi_map_manager/chunk_data_recv
+    msg_type: plan_env/ChunkData
+    srcIP: drone1
+    srcPort: 3101
+  - topic_name: /multi_map_manager/chunk_data_recv
+    msg_type: plan_env/ChunkData
+    srcIP: drone2
+    srcPort: 3101
+  - topic_name: /multi_map_manager/chunk_data_recv
+    msg_type: plan_env/ChunkData
+    srcIP: drone3
+    srcPort: 3101
+  - topic_name: /multi_map_manager/chunk_data_recv
+    msg_type: plan_env/ChunkData
+    srcIP: drone4
+    srcPort: 3101
+  - topic_name: /multi_map_manager/chunk_data_recv
+    msg_type: plan_env/ChunkData
+    srcIP: drone5
+    srcPort: 3101
+
+  - topic_name: /planning/swarm_traj_recv
+    msg_type: bspline/Bspline
+    srcIP: drone1
+    srcPort: 3105
+  - topic_name: /planning/swarm_traj_recv
+    msg_type: bspline/Bspline
+    srcIP: drone2
+    srcPort: 3105
+  - topic_name: /planning/swarm_traj_recv
+    msg_type: bspline/Bspline
+    srcIP: drone3
+    srcPort: 3105
+  - topic_name: /planning/swarm_traj_recv
+    msg_type: bspline/Bspline
+    srcIP: drone4
+    srcPort: 3105
+  - topic_name: /planning/swarm_traj_recv
+    msg_type: bspline/Bspline
+    srcIP: drone5
+    srcPort: 3105
+
+  - topic_name: /quad_1/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
+    srcIP: drone1
+    srcPort: 3005
+  - topic_name: /quad_2/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
+    srcIP: drone2
+    srcPort: 3005
+  - topic_name: /quad_3/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
+    srcIP: drone3
+    srcPort: 3005
+  - topic_name: /quad_4/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
+    srcIP: drone4
+    srcPort: 3005
+  - topic_name: /quad_5/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
+    srcIP: drone5
+    srcPort: 3005
+
+  - topic_name: /quad_1/planning_vis/frontier
+    msg_type: visualization_msgs/Marker
+    srcIP: drone1
+    srcPort: 3002
+  - topic_name: /quad_2/planning_vis/frontier
+    msg_type: visualization_msgs/Marker
+    srcIP: drone2
+    srcPort: 3002
+  - topic_name: /quad_3/planning_vis/frontier
+    msg_type: visualization_msgs/Marker
+    srcIP: drone3
+    srcPort: 3002
+  - topic_name: /quad_4/planning_vis/frontier
+    msg_type: visualization_msgs/Marker
+    srcIP: drone4
+    srcPort: 3002
+  - topic_name: /quad_5/planning_vis/frontier
+    msg_type: visualization_msgs/Marker
+    srcIP: drone5
+    srcPort: 3002
+
+  - topic_name: /quad_1/planning_vis/trajectory
+    msg_type: visualization_msgs/Marker
+    srcIP: drone1
+    srcPort: 3003
+  - topic_name: /quad_2/planning_vis/trajectory
+    msg_type: visualization_msgs/Marker
+    srcIP: drone2
+    srcPort: 3003
+  - topic_name: /quad_3/planning_vis/trajectory
+    msg_type: visualization_msgs/Marker
+    srcIP: drone3
+    srcPort: 3003
+  - topic_name: /quad_4/planning_vis/trajectory
+    msg_type: visualization_msgs/Marker
+    srcIP: drone4
+    srcPort: 3003
+  - topic_name: /quad_5/planning_vis/trajectory
+    msg_type: visualization_msgs/Marker
+    srcIP: drone5
+    srcPort: 3003
+
+  - topic_name: /quad_1/planning/viewpoints
+    msg_type: visualization_msgs/Marker
+    srcIP: drone1
+    srcPort: 3006
+  - topic_name: /quad_2/planning/viewpoints
+    msg_type: visualization_msgs/Marker
+    srcIP: drone2
+    srcPort: 3006
+  - topic_name: /quad_3/planning/viewpoints
+    msg_type: visualization_msgs/Marker
+    srcIP: drone3
+    srcPort: 3006
+  - topic_name: /quad_4/planning/viewpoints
+    msg_type: visualization_msgs/Marker
+    srcIP: drone4
+    srcPort: 3006
+  - topic_name: /quad_5/planning/viewpoints
+    msg_type: visualization_msgs/Marker
+    srcIP: drone5
+    srcPort: 3006

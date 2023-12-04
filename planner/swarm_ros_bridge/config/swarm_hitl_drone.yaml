@@ -1,0 +1,240 @@
+### default supported ROS message types:
+# sensor_msgs/Imu
+# geometry_msgs/Twist
+# std_msgs/String
+# (modify/add in ros_sub_pub.hpp if you need more)
+### max number of send_topics supported: 50
+
+### list all <IPname: IP> here (IPname can be set arbitrarily) ###
+IP:
+  self: "*" # '*' stands for all self IPs
+  gcs: 192.168.101.138
+  gcs2: 192.168.101.10
+  drone1: 192.168.101.151
+  drone2: 192.168.101.152
+  drone3: 192.168.101.153
+  drone4: 192.168.101.154
+  drone5: 192.168.101.155
+  neighbor: 127.0.0.1 # modify to the IP of other machines
+
+####### Send these ROS messages to remote robots #######
+## if no send_topics needed, comment all these out
+## 30xx  drone -> ground station
+## 31xx  drone -> drone
+## 32xx  ground station -> drone
+send_topics:
+  - topic_name: /multi_map_manager/chunk_stamps
+    msg_type: plan_env/ChunkStamps
+    max_freq: 30
+    srcIP: self
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_data
+    msg_type: plan_env/ChunkData
+    max_freq: 100
+    srcIP: self
+    srcPort: 3101
+  - topic_name: /swarm_expl/drone_state
+    msg_type: exploration_manager/DroneState
+    max_freq: 100
+    srcIP: self
+    srcPort: 3102
+  - topic_name: /swarm_expl/pair_opt
+    msg_type: exploration_manager/PairOpt
+    max_freq: 100
+    srcIP: self
+    srcPort: 3103
+  - topic_name: /swarm_expl/pair_opt_res
+    msg_type: exploration_manager/PairOptResponse
+    max_freq: 100
+    srcIP: self
+    srcPort: 3104
+  - topic_name: /planning/swarm_traj
+    msg_type: bspline/Bspline
+    max_freq: 100
+    srcIP: self
+    srcPort: 3105
+
+  - topic_name: /planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
+    max_freq: 100
+    srcIP: self
+    srcPort: 3005
+  - topic_name: /planning_vis/frontier
+    msg_type: visualization_msgs/Marker
+    max_freq: 10
+    srcIP: self
+    srcPort: 3002
+  - topic_name: /planning_vis/trajectory
+    msg_type: visualization_msgs/Marker
+    max_freq: 10
+    srcIP: self
+    srcPort: 3003
+  - topic_name: /sdf_map/occupancy_all
+    msg_type: sensor_msgs/PointCloud2
+    max_freq: 10
+    srcIP: self
+    srcPort: 3004
+  - topic_name: /planning_vis/viewpoints
+    msg_type: visualization_msgs/Marker
+    max_freq: 10
+    srcIP: self
+    srcPort: 3006
+
+####### receive these ROS messages from remote robots #######
+## if no recv_topics needed, comment all these out
+recv_topics:
+  - topic_name: /multi_map_manager/chunk_stamps
+    msg_type: plan_env/ChunkStamps
+    srcIP: gcs
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_stamps
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone1
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_stamps
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone2
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_stamps
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone3
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_stamps
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone4
+    srcPort: 3100
+  - topic_name: /multi_map_manager/chunk_stamps
+    msg_type: plan_env/ChunkStamps
+    srcIP: drone5
+    srcPort: 3100
+
+  - topic_name: /multi_map_manager/chunk_data
+    msg_type: plan_env/ChunkData
+    srcIP: gcs
+    srcPort: 3101
+  - topic_name: /multi_map_manager/chunk_data
+    msg_type: plan_env/ChunkData
+    srcIP: drone1
+    srcPort: 3101
+  - topic_name: /multi_map_manager/chunk_data
+    msg_type: plan_env/ChunkData
+    srcIP: drone2
+    srcPort: 3101
+  - topic_name: /multi_map_manager/chunk_data
+    msg_type: plan_env/ChunkData
+    srcIP: drone3
+    srcPort: 3101
+  - topic_name: /multi_map_manager/chunk_data
+    msg_type: plan_env/ChunkData
+    srcIP: drone4
+    srcPort: 3101
+  - topic_name: /multi_map_manager/chunk_data
+    msg_type: plan_env/ChunkData
+    srcIP: drone5
+    srcPort: 3101
+
+  - topic_name: /swarm_expl/drone_state
+    msg_type: exploration_manager/DroneState
+    srcIP: drone1
+    srcPort: 3102
+  - topic_name: /swarm_expl/drone_state
+    msg_type: exploration_manager/DroneState
+    srcIP: drone2
+    srcPort: 3102
+  - topic_name: /swarm_expl/drone_state
+    msg_type: exploration_manager/DroneState
+    srcIP: drone3
+    srcPort: 3102
+  - topic_name: /swarm_expl/drone_state
+    msg_type: exploration_manager/DroneState
+    srcIP: drone4
+    srcPort: 3102
+  - topic_name: /swarm_expl/drone_state
+    msg_type: exploration_manager/DroneState
+    srcIP: drone5
+    srcPort: 3102
+
+  - topic_name: /swarm_expl/pair_opt
+    msg_type: exploration_manager/PairOpt
+    srcIP: drone1
+    srcPort: 3103
+  - topic_name: /swarm_expl/pair_opt
+    msg_type: exploration_manager/PairOpt
+    srcIP: drone2
+    srcPort: 3103
+  - topic_name: /swarm_expl/pair_opt
+    msg_type: exploration_manager/PairOpt
+    srcIP: drone3
+    srcPort: 3103
+  - topic_name: /swarm_expl/pair_opt
+    msg_type: exploration_manager/PairOpt
+    srcIP: drone4
+    srcPort: 3103
+  - topic_name: /swarm_expl/pair_opt
+    msg_type: exploration_manager/PairOpt
+    srcIP: drone5
+    srcPort: 3103
+
+  - topic_name: /swarm_expl/pair_opt_res
+    msg_type: exploration_manager/PairOptResponse
+    srcIP: drone1
+    srcPort: 3104
+  - topic_name: /swarm_expl/pair_opt_res
+    msg_type: exploration_manager/PairOptResponse
+    srcIP: drone2
+    srcPort: 3104
+  - topic_name: /swarm_expl/pair_opt_res
+    msg_type: exploration_manager/PairOptResponse
+    srcIP: drone3
+    srcPort: 3104
+  - topic_name: /swarm_expl/pair_opt_res
+    msg_type: exploration_manager/PairOptResponse
+    srcIP: drone4
+    srcPort: 3104
+  - topic_name: /swarm_expl/pair_opt_res
+    msg_type: exploration_manager/PairOptResponse
+    srcIP: drone5
+    srcPort: 3104
+
+  - topic_name: /planning/swarm_traj
+    msg_type: bspline/Bspline
+    srcIP: drone1
+    srcPort: 3105
+  - topic_name: /planning/swarm_traj
+    msg_type: bspline/Bspline
+    srcIP: drone2
+    srcPort: 3105
+  - topic_name: /planning/swarm_traj
+    msg_type: bspline/Bspline
+    srcIP: drone3
+    srcPort: 3105
+  - topic_name: /planning/swarm_traj
+    msg_type: bspline/Bspline
+    srcIP: drone4
+    srcPort: 3105
+  - topic_name: /planning/swarm_traj
+    msg_type: bspline/Bspline
+    srcIP: drone5
+    srcPort: 3105
+
+  - topic_name: /move_base_simple/goal # start trigger
+    msg_type: geometry_msgs/PoseStamped
+    srcIP: gcs
+    srcPort: 3200
+  - topic_name: /move_base_simple/goal # start trigger
+    msg_type: geometry_msgs/PoseStamped
+    srcIP: gcs2
+    srcPort: 3200
+
+  - topic_name: /lidar_slam/odom
+    msg_type: nav_msgs/Odometry
+    srcIP: gcs
+    srcPort: 3206 # replaceable
+  - topic_name: /pcl_render_node/cloud
+    msg_type: sensor_msgs/PointCloud2
+    srcIP: gcs
+    srcPort: 3207 # replaceable
+  - topic_name: /pcl_render_node/sensor_pose
+    msg_type: geometry_msgs/PoseStamped
+    srcIP: gcs
+    srcPort: 3208 # replaceable
