@@ -11,17 +11,14 @@ IP:
   gcs: 192.168.101.138
   gcs2: 192.168.101.10
   drone6: 192.168.101.151
-  drone7: 192.168.101.152
+  drone7: 192.168.101.157
   drone8: 192.168.101.153
   drone9: 192.168.101.154
-
   drone5: 192.168.101.155
-
   drone1: 192.168.101.57
   drone2: 192.168.101.58
   drone3: 192.168.101.62
   drone4: 192.168.101.64
-
   drone10: 192.168.101.65
   neighbor: 127.0.0.1 # modify to the IP of other machines
 
@@ -35,7 +32,7 @@ send_topics:
     msg_type: traj_utils/MINCOTraj
     srcIP: self
     max_freq: 10
-    srcPort: 3001
+    srcPort: 3100
 
   - topic_name: odom_visualization/path
     msg_type: nav_msgs/Path
@@ -61,14 +58,58 @@ recv_topics:
   - topic_name: /broadcast_traj_to_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: gcs
-    srcPort: 3200
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: gcs2
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone1
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone2
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone3
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone4
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone5
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone6
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone7
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone8
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone9
+    srcPort: 3100
+  - topic_name: /broadcast_traj_to_planner
+    msg_type: traj_utils/MINCOTraj
+    srcIP: drone10
+    srcPort: 3100
 
   - topic_name: /joystick_from_bridge
     msg_type: sensor_msgs/Joy
     srcIP: gcs
     srcPort: 3201
 
-  - topic_name: /traj_start_trigger 
+  - topic_name: /traj_start_trigger
     msg_type: geometry_msgs/PoseStamped
     srcIP: gcs
     srcPort: 3202
@@ -76,9 +117,9 @@ recv_topics:
   - topic_name: odometry
     msg_type: nav_msgs/Odometry
     srcIP: gcs
-    srcPort: 3210
+    srcPort: 3210 # change
 
   - topic_name: /pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: gcs
-    srcPort: 3220
+    srcPort: 3220 # change

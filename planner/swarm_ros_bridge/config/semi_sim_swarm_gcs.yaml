@@ -10,20 +10,16 @@ IP:
   self: "*" # '*' stands for all self IPs
   gcs: 192.168.101.138
   gcs2: 192.168.101.10
-  drone6: 192.168.101.151
-  drone7: 192.168.101.152
-  drone8: 192.168.101.153
-  drone9: 192.168.101.154
-
-  drone5: 192.168.101.155
-
   drone1: 192.168.101.57
   drone2: 192.168.101.58
   drone3: 192.168.101.62
   drone4: 192.168.101.64
-
+  drone5: 192.168.101.155
+  drone6: 192.168.101.151
+  drone7: 192.168.101.157
+  drone8: 192.168.101.153
+  drone9: 192.168.101.154
   drone10: 192.168.101.65
-
   neighbor: 127.0.0.1 # modify to the IP of other machines
 
 ####### Send these ROS messages to remote robots #######
@@ -41,12 +37,12 @@ send_topics:
     msg_type: sensor_msgs/Joy
     srcIP: self
     srcPort: 3201
-    max_freq: 100
-  - topic_name: /traj_start_trigger 
+    max_freq: 10
+  - topic_name: /traj_start_trigger
     msg_type: geometry_msgs/PoseStamped
     srcIP: self
     srcPort: 3202
-    max_freq: 100
+    max_freq: 10
 
   - topic_name: /quad_0/odometry
     msg_type: nav_msgs/Odometry
@@ -156,123 +152,123 @@ recv_topics:
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone1
-    srcPort: 3001
+    srcPort: 3100
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone2
-    srcPort: 3001
+    srcPort: 3100
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone3
-    srcPort: 3001
+    srcPort: 3100
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone4
-    srcPort: 3001
+    srcPort: 3100
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone5
-    srcPort: 3001
+    srcPort: 3100
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone6
-    srcPort: 3001
+    srcPort: 3100
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone7
-    srcPort: 3001
+    srcPort: 3100
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone8
-    srcPort: 3001
+    srcPort: 3100
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone9
-    srcPort: 3001
+    srcPort: 3100
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: drone10
-    srcPort: 3001
+    srcPort: 3100
 
   # Visualization
-  - topic_name: /quad_0/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+  - topic_name: /quad_1/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone1
-    srcPort: 3004
-  - topic_name: /quad_1/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+    srcPort: 3002
+  - topic_name: /quad_2/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone2
-    srcPort: 3004
-  - topic_name: /quad_2/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+    srcPort: 3002
+  - topic_name: /quad_3/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone3
-    srcPort: 3004
-  - topic_name: /quad_3/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+    srcPort: 3002
+  - topic_name: /quad_4/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone4
-    srcPort: 3004
-  - topic_name: /quad_4/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+    srcPort: 3002
+  - topic_name: /quad_5/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone5
-    srcPort: 3004
-  - topic_name: /quad_5/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+    srcPort: 3002
+  - topic_name: /quad_6/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone6
-    srcPort: 3004
-  - topic_name: /quad_6/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+    srcPort: 3002
+  - topic_name: /quad_7/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone7
-    srcPort: 3004
-  - topic_name: /quad_7/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+    srcPort: 3002
+  - topic_name: /quad_8/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone8
-    srcPort: 3004
-  - topic_name: /quad_8/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+    srcPort: 3002
+  - topic_name: /quad_9/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone9
-    srcPort: 3004 
-  - topic_name: /quad_9/planning/pos_cmd
-    msg_type: quadrotor_msgs/PositionCommand
+    srcPort: 3002
+  - topic_name: /quad_10/odom_visualization/path
+    msg_type: nav_msgs/Path
     srcIP: drone10
-    srcPort: 3004
+    srcPort: 3002
 
-  - topic_name: /quad_0/ego_planner_node/optimal_list
-    msg_type: visualization_msgs/Marker
-    srcIP: drone1
-    srcPort: 3003
   - topic_name: /quad_1/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone2
+    srcIP: drone1
     srcPort: 3003
   - topic_name: /quad_2/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone3
+    srcIP: drone2
     srcPort: 3003
   - topic_name: /quad_3/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone4
+    srcIP: drone3
     srcPort: 3003
   - topic_name: /quad_4/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone5
+    srcIP: drone4
     srcPort: 3003
   - topic_name: /quad_5/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone6
+    srcIP: drone5
     srcPort: 3003
   - topic_name: /quad_6/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone7
+    srcIP: drone6
     srcPort: 3003
   - topic_name: /quad_7/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone8
+    srcIP: drone7
     srcPort: 3003
   - topic_name: /quad_8/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone9
+    srcIP: drone8
     srcPort: 3003
   - topic_name: /quad_9/ego_planner_node/optimal_list
+    msg_type: visualization_msgs/Marker
+    srcIP: drone9
+    srcPort: 3003
+  - topic_name: /quad_10/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
     srcIP: drone10
     srcPort: 3003

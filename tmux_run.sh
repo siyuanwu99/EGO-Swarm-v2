@@ -138,17 +138,8 @@ run_half_sim() {
 
 		echo "Connecting to $name with sensor $group..."
 
-		# Commands to run depending on the group
-		if [ "$group" == "realsense" ]; then
-			cmd="cam"
-		elif [ "$group" == "lidar" ]; then
-			cmd="lio"
-		else
-			cmd="echo Unknown group"
-		fi
-
 		# SSH and tmux session configuration
-		ssh -t "nvidia@$ip" "
+		ssh -t "$group@$ip" "
 				tmux list-sessions &> /dev/null && tmux kill-session -a
         tmux new-session -d -s $name
 				tmux split-window -h -p 50
@@ -165,7 +156,7 @@ run_half_sim() {
 
         exit;
     	"
-		ssh -X -t "nvidia@$ip" "gnome-terminal -- tmux attach -t $name"
+		ssh -X -t "$group@$ip" "gnome-terminal -- tmux attach -t $name"
 		echo "Started tmux session for $name"
 	done
 }
@@ -185,7 +176,7 @@ kill_vins() {
 		fi
 
 		# SSH and tmux session configuration
-		ssh -t "nvidia@$ip" "
+		ssh -t "$group@$ip" "
 					tmux send-keys -t $name:1.1 C-c C-m
 					tmux send-keys -t $name:1.2 C-c C-m
 					echo '[$name] Program Killed]'
@@ -203,7 +194,7 @@ kill_sessions() {
 		group=${working_groups[$i]}
 
 		# SSH and tmux session configuration
-		ssh -t "nvidia@$ip" "
+		ssh -t "$group@$ip" "
 				tmux kill-session -t $name
 				echo '>> [$name] Killed all sessions.'
 				pkill gnome-terminal
@@ -223,9 +214,9 @@ shutdown_all() {
 		group=${working_groups[$i]}
 
 		# SSH and tmux session configuration
-		ssh -t "nvidia@$ip" "
+		ssh -t "$group@$ip" "
 				echo '[$name] Shutting down...'
-				echo 'nvidia' | sudo -S shutdown now 
+				echo '$group' | sudo -S shutdown now 
         exit;
     	"
 	done
