@@ -36,115 +36,115 @@ send_topics:
     msg_type: traj_utils/MINCOTraj
     srcIP: self
     srcPort: 3200
-    max_freq: 10
+    max_freq: 200
   - topic_name: /joystick_from_bridge
     msg_type: sensor_msgs/Joy
     srcIP: self
     srcPort: 3201
-    max_freq: 10
+    max_freq: 100
   - topic_name: /traj_start_trigger 
     msg_type: geometry_msgs/PoseStamped
     srcIP: self
     srcPort: 3202
-    max_freq: 10
+    max_freq: 100
 
-  - topic_name: /quad_1/odometry
+  - topic_name: /quad_0/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3210
-    max_freq: 10
-  - topic_name: /quad_2/odometry
+    max_freq: 100
+  - topic_name: /quad_1/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3211
-    max_freq: 10
-  - topic_name: /quad_3/odometry
+    max_freq: 100
+  - topic_name: /quad_2/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3212
-    max_freq: 10
-  - topic_name: /quad_4/odometry
+    max_freq: 100
+  - topic_name: /quad_3/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3213
-    max_freq: 10
-  - topic_name: /quad_5/odometry
+    max_freq: 100
+  - topic_name: /quad_4/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3214
-    max_freq: 10
-  - topic_name: /quad_6/odometry
+    max_freq: 100
+  - topic_name: /quad_5/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3215
-    max_freq: 10
-  - topic_name: /quad_7/odometry
+    max_freq: 100
+  - topic_name: /quad_6/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3216
-    max_freq: 10
-  - topic_name: /quad_8/odometry
+    max_freq: 100
+  - topic_name: /quad_7/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3217
-    max_freq: 10
-  - topic_name: /quad_9/odometry
+    max_freq: 100
+  - topic_name: /quad_8/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3218
-    max_freq: 10
-  - topic_name: /quad_10/odometry
+    max_freq: 100
+  - topic_name: /quad_9/odometry
     msg_type: nav_msgs/Odometry
     srcIP: self
     srcPort: 3219
-    max_freq: 10
+    max_freq: 100
 
-  - topic_name: /quad_1/pcl_render_node/cloud
+  - topic_name: /quad_0/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3220
     max_freq: 20
-  - topic_name: /quad_2/pcl_render_node/cloud
+  - topic_name: /quad_1/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3221
     max_freq: 20
-  - topic_name: /quad_3/pcl_render_node/cloud
+  - topic_name: /quad_2/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3222
     max_freq: 20
-  - topic_name: /quad_4/pcl_render_node/cloud
+  - topic_name: /quad_3/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3223
     max_freq: 20
-  - topic_name: /quad_5/pcl_render_node/cloud
+  - topic_name: /quad_4/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3224
     max_freq: 20
-  - topic_name: /quad_6/pcl_render_node/cloud
+  - topic_name: /quad_5/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3225
     max_freq: 20
-  - topic_name: /quad_7/pcl_render_node/cloud
+  - topic_name: /quad_6/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3226
     max_freq: 20
-  - topic_name: /quad_8/pcl_render_node/cloud
+  - topic_name: /quad_7/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3227
     max_freq: 20
-  - topic_name: /quad_9/pcl_render_node/cloud
+  - topic_name: /quad_8/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3228
     max_freq: 20
-  - topic_name: /quad_10/pcl_render_node/cloud
+  - topic_name: /quad_9/pcl_render_node/cloud
     msg_type: sensor_msgs/PointCloud2
     srcIP: self
     srcPort: 3229
@@ -195,84 +195,84 @@ recv_topics:
     srcPort: 3001
 
   # Visualization
-  - topic_name: /quad_1/odom_visualization/path
-    msg_type: nav_msgs/Path
+  - topic_name: /quad_0/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone1
-    srcPort: 3002
-  - topic_name: /quad_2/odom_visualization/path
-    msg_type: nav_msgs/Path
+    srcPort: 3004
+  - topic_name: /quad_1/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone2
-    srcPort: 3002
-  - topic_name: /quad_3/odom_visualization/path
-    msg_type: nav_msgs/Path
+    srcPort: 3004
+  - topic_name: /quad_2/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone3
-    srcPort: 3002
-  - topic_name: /quad_4/odom_visualization/path
-    msg_type: nav_msgs/Path
+    srcPort: 3004
+  - topic_name: /quad_3/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone4
-    srcPort: 3002
-  - topic_name: /quad_5/odom_visualization/path
-    msg_type: nav_msgs/Path
+    srcPort: 3004
+  - topic_name: /quad_4/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone5
-    srcPort: 3002
-  - topic_name: /quad_6/odom_visualization/path
-    msg_type: nav_msgs/Path
+    srcPort: 3004
+  - topic_name: /quad_5/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone6
-    srcPort: 3002
-  - topic_name: /quad_7/odom_visualization/path
-    msg_type: nav_msgs/Path
+    srcPort: 3004
+  - topic_name: /quad_6/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone7
-    srcPort: 3002
-  - topic_name: /quad_8/odom_visualization/path
-    msg_type: nav_msgs/Path
+    srcPort: 3004
+  - topic_name: /quad_7/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone8
-    srcPort: 3002
-  - topic_name: /quad_9/odom_visualization/path
-    msg_type: nav_msgs/Path
+    srcPort: 3004
+  - topic_name: /quad_8/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone9
-    srcPort: 3002 
-  - topic_name: /quad_10/odom_visualization/path
-    msg_type: nav_msgs/Path
+    srcPort: 3004 
+  - topic_name: /quad_9/planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone10
-    srcPort: 3002
+    srcPort: 3004
 
-  - topic_name: /quad_1/ego_planner_node/optimal_list
+  - topic_name: /quad_0/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
     srcIP: drone1
+    srcPort: 3003
+  - topic_name: /quad_1/ego_planner_node/optimal_list
+    msg_type: visualization_msgs/Marker
+    srcIP: drone2
     srcPort: 3003
   - topic_name: /quad_2/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone2
+    srcIP: drone3
     srcPort: 3003
   - topic_name: /quad_3/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone3
+    srcIP: drone4
     srcPort: 3003
   - topic_name: /quad_4/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone4
+    srcIP: drone5
     srcPort: 3003
   - topic_name: /quad_5/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone5
+    srcIP: drone6
     srcPort: 3003
   - topic_name: /quad_6/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone6
+    srcIP: drone7
     srcPort: 3003
   - topic_name: /quad_7/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone7
+    srcIP: drone8
     srcPort: 3003
   - topic_name: /quad_8/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
-    srcIP: drone8
-    srcPort: 3003
-  - topic_name: /quad_9/ego_planner_node/optimal_list
-    msg_type: visualization_msgs/Marker
     srcIP: drone9
     srcPort: 3003
-  - topic_name: /quad_10/ego_planner_node/optimal_list
+  - topic_name: /quad_9/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
     srcIP: drone10
     srcPort: 3003
