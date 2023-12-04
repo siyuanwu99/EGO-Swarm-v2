@@ -191,46 +191,6 @@ recv_topics:
     srcPort: 3100
 
   # Visualization
-  - topic_name: /quad_1/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone1
-    srcPort: 3002
-  - topic_name: /quad_2/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone2
-    srcPort: 3002
-  - topic_name: /quad_3/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone3
-    srcPort: 3002
-  - topic_name: /quad_4/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone4
-    srcPort: 3002
-  - topic_name: /quad_5/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone5
-    srcPort: 3002
-  - topic_name: /quad_6/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone6
-    srcPort: 3002
-  - topic_name: /quad_7/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone7
-    srcPort: 3002
-  - topic_name: /quad_8/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone8
-    srcPort: 3002
-  - topic_name: /quad_9/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone9
-    srcPort: 3002
-  - topic_name: /quad_10/odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: drone10
-    srcPort: 3002
 
   - topic_name: /quad_1/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
