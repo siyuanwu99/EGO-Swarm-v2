@@ -1,9 +1,9 @@
 <launch>
     <!-- size of map, change the size inflate x, y, z according to your application -->
-    <arg name="drone_id" value="0"/>
-    <arg name="init_x" value="-15.0"/>
-    <arg name="init_y" value="-9.0"/>
-    <arg name="init_z" value="0.1"/>
+    <arg name="drone_id" default="0"/>
+    <arg name="init_x" default="-15.0"/>
+    <arg name="init_y" default="-9.0"/>
+    <arg name="init_z" default="0.1"/>
     <arg name="map_size_x" value="50.0"/>
     <arg name="map_size_y" value="50.0"/>
     <arg name="map_size_z" value=" 3.0"/>
