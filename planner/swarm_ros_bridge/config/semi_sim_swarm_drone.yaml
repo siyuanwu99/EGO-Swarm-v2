@@ -40,6 +40,12 @@ send_topics:
     max_freq: 20
     srcPort: 3003
 
+  - topic_name: /planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
+    srcIP: self
+    max_freq: 150
+    srcPort: 3004
+
   # - topic_name: ego_planner_node/grid_map/occupancy_inflate
   #   msg_type: visualization_msgs/Marker
   #   srcIP: self
