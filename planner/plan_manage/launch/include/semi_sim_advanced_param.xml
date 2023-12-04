@@ -43,7 +43,7 @@
         <param name="fsm/planning_horizon" value="$(arg planning_horizon)" type="double"/>
         <!--always set to 1.5 times grater than sensing horizen-->
         <param name="fsm/emergency_time" value="1.0" type="double"/>
-        <param name="fsm/realworld_experiment" value="false"/>
+        <param name="fsm/realworld_experiment" value="true"/>
         <param name="fsm/fail_safe" value="true"/>
         <param name="fsm/waypoint_num" value="$(arg point_num)" type="int"/>
 
