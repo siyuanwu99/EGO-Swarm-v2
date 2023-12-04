@@ -148,7 +148,7 @@ run_half_sim() {
 		gy=${working_goal_y[$i]}
 		gz=${working_goal_z[$i]}
 
-		echo "Connecting to $name with group '$group'..."
+		echo "Connecting to $name with group '$group' | DRONE_ID=$i | INIT_POS=($x,$y,$z) | GOAL_POS=($gx,$gy,$gz)"
 
 		if [ "$group" == "nv" ]; then
 			cmd="devel/setup.zsh"
@@ -168,7 +168,7 @@ run_half_sim() {
 				done
 
 				tmux send-keys -t $name:1.1 'roslaunch swarm_ros_bridge onboard_bridge.launch config:=semi_sim_swarm_drone.yaml' C-m
-				tmux send-keys -t $name:1.2 'sleep 5 && roslaunch ego_planner semi_sim_run_onboard.launch drone_id:=$i init_x:=$x init_y:=$y init_z:=$z target0_x:=$gx target0_y:=$gy target0_z:=$gz' C-m
+				tmux send-keys -t $name:1.2 'sleep 3 && roslaunch ego_planner semi_sim_run_onboard.launch drone_id:=$i init_x:=$x init_y:=$y init_z:=$z target0_x:=$gx target0_y:=$gy target0_z:=$gz' C-m
 
 				echo '[$name] Initialized.'
 

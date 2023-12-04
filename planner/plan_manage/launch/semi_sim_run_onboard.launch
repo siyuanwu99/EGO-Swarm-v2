@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <launch>
     <!-- size of map, change the size inflate x, y, z according to your application -->
     <arg name="drone_id" default="0"/>

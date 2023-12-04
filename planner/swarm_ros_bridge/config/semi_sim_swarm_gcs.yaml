@@ -228,7 +228,7 @@ recv_topics:
     msg_type: visualization_msgs/Marker
     srcIP: drone9
     srcPort: 3003
-  - topic_name: /quad_10/ego_planner_node/optimal_list
+  - topic_name: /quad_0/ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
     srcIP: drone10
     srcPort: 3003
@@ -269,7 +269,7 @@ recv_topics:
     msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone9
     srcPort: 3004
-  - topic_name: /quad_10/planning/pos_cmd
+  - topic_name: /quad_0/planning/pos_cmd
     msg_type: quadrotor_msgs/PositionCommand
     srcIP: drone10
     srcPort: 3004
