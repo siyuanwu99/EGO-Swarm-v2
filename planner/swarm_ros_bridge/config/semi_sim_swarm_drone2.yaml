@@ -37,11 +37,11 @@ send_topics:
     max_freq: 10
     srcPort: 3001
 
-  - topic_name: odom_visualization/path
-    msg_type: nav_msgs/Path
-    srcIP: self
-    max_freq: 20
-    srcPort: 3002
+  # - topic_name: odom_visualization/path
+  #   msg_type: nav_msgs/Path
+  #   srcIP: self
+  #   max_freq: 20
+  #   srcPort: 3002
 
   - topic_name: ego_planner_node/optimal_list
     msg_type: visualization_msgs/Marker
@@ -54,6 +54,12 @@ send_topics:
   #   srcIP: self
   #   max_freq: 20
   #   srcPort: 3004
+
+  - topic_name: planning/pos_cmd
+    msg_type: quadrotor_msgs/PositionCommand
+    srcIP: self
+    max_freq: 200
+    srcPort: 3004
 
 ####### receive these ROS messages from remote robots #######
 ## if no recv_topics needed, comment all these out
