@@ -67,6 +67,9 @@
 #define MSG_TYPE11 "quadrotor_msgs/PositionCommand"
 #define MSG_CLASS11 quadrotor_msgs::PositionCommand
 
+#include <nav_msgs/Path.h>
+#define MSG_TYPE12 "nav_msgs/Path"
+#define MSG_CLASS12 nav_msgs::Path
 
 
 // #include <xxx/yy.h>
