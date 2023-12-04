@@ -34,7 +34,7 @@ send_topics:
   - topic_name: /broadcast_traj_from_planner
     msg_type: traj_utils/MINCOTraj
     srcIP: self
-    max_freq: 10
+    max_freq: 200
     srcPort: 3001
 
   # - topic_name: odom_visualization/path
