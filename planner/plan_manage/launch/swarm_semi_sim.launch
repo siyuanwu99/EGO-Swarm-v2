@@ -6,10 +6,10 @@
     <arg name="odom_topic" value="odometry" />
 
     <!-- swarm topic transmitter bridge-->
-    <include file="$(find swarm_bridge)/launch/bridge_udp.launch">
-        <arg name="drone_id" value="999"/>
-        <arg name="broadcast_ip" value="127.0.0.255"/>
-    </include>
+    <!-- <include file="$(find swarm_bridge)/launch/bridge_udp.launch"> -->
+    <!--     <arg name="drone_id" value="999"/> -->
+    <!--     <arg name="broadcast_ip" value="127.0.0.255"/> -->
+    <!-- </include> -->
 
     <!-- map -->
     <node pkg ="map_generator" name ="random_forest" type ="random_forest" output = "screen">
@@ -88,4 +88,130 @@
         </include>
     </group> 
     
+    <group ns="quad_3">
+        <arg name="drone_id" value="3"/>
+        <arg name="init_x" value="-15.0"/>
+        <arg name="init_y" value="-3.0"/>
+        <arg name="init_z" value="0.1"/>
+        <!-- use simulator -->
+        <include file="$(find ego_planner)/launch/include/semi_sim_simulator.xml">
+            <arg name="drone_id" value="$(arg drone_id)"/>
+            <arg name="init_x_" value="$(arg init_x)"/>
+            <arg name="init_y_" value="$(arg init_y)"/>
+            <arg name="init_z_" value="$(arg init_z)"/>
+            <arg name="map_size_x_" value="$(arg map_size_x)"/>
+            <arg name="map_size_y_" value="$(arg map_size_y)"/>
+            <arg name="map_size_z_" value="$(arg map_size_z)"/>
+            <arg name="odometry_topic" value="$(arg odom_topic)"/>
+        </include>
+    </group> 
+
+    <group ns="quad_4">
+        <arg name="drone_id" value="4"/>
+        <arg name="init_x" value="-15.0"/>
+        <arg name="init_y" value="-1.0"/>
+        <arg name="init_z" value="0.1"/>
+        <!-- use simulator -->
+        <include file="$(find ego_planner)/launch/include/semi_sim_simulator.xml">
+            <arg name="drone_id" value="$(arg drone_id)"/>
+            <arg name="init_x_" value="$(arg init_x)"/>
+            <arg name="init_y_" value="$(arg init_y)"/>
+            <arg name="init_z_" value="$(arg init_z)"/>
+            <arg name="map_size_x_" value="$(arg map_size_x)"/>
+            <arg name="map_size_y_" value="$(arg map_size_y)"/>
+            <arg name="map_size_z_" value="$(arg map_size_z)"/>
+            <arg name="odometry_topic" value="$(arg odom_topic)"/>
+        </include>
+    </group> 
+
+    <group ns="quad_5">
+        <arg name="drone_id" value="5"/>
+        <arg name="init_x" value="-15.0"/>
+        <arg name="init_y" value="1.0"/>
+        <arg name="init_z" value="0.1"/>
+        <!-- use simulator -->
+        <include file="$(find ego_planner)/launch/include/semi_sim_simulator.xml">
+            <arg name="drone_id" value="$(arg drone_id)"/>
+            <arg name="init_x_" value="$(arg init_x)"/>
+            <arg name="init_y_" value="$(arg init_y)"/>
+            <arg name="init_z_" value="$(arg init_z)"/>
+            <arg name="map_size_x_" value="$(arg map_size_x)"/>
+            <arg name="map_size_y_" value="$(arg map_size_y)"/>
+            <arg name="map_size_z_" value="$(arg map_size_z)"/>
+            <arg name="odometry_topic" value="$(arg odom_topic)"/>
+        </include>
+    </group> 
+
+    <group ns="quad_6">
+        <arg name="drone_id" value="6"/>
+        <arg name="init_x" value="-15.0"/>
+        <arg name="init_y" value="3.0"/>
+        <arg name="init_z" value="0.1"/>
+        <!-- use simulator -->
+        <include file="$(find ego_planner)/launch/include/semi_sim_simulator.xml">
+            <arg name="drone_id" value="$(arg drone_id)"/>
+            <arg name="init_x_" value="$(arg init_x)"/>
+            <arg name="init_y_" value="$(arg init_y)"/>
+            <arg name="init_z_" value="$(arg init_z)"/>
+            <arg name="map_size_x_" value="$(arg map_size_x)"/>
+            <arg name="map_size_y_" value="$(arg map_size_y)"/>
+            <arg name="map_size_z_" value="$(arg map_size_z)"/>
+            <arg name="odometry_topic" value="$(arg odom_topic)"/>
+        </include>
+    </group> 
+
+    <group ns="quad_7">
+        <arg name="drone_id" value="7"/>
+        <arg name="init_x" value="-15.0"/>
+        <arg name="init_y" value="5.0"/>
+        <arg name="init_z" value="0.1"/>
+        <!-- use simulator -->
+        <include file="$(find ego_planner)/launch/include/semi_sim_simulator.xml">
+            <arg name="drone_id" value="$(arg drone_id)"/>
+            <arg name="init_x_" value="$(arg init_x)"/>
+            <arg name="init_y_" value="$(arg init_y)"/>
+            <arg name="init_z_" value="$(arg init_z)"/>
+            <arg name="map_size_x_" value="$(arg map_size_x)"/>
+            <arg name="map_size_y_" value="$(arg map_size_y)"/>
+            <arg name="map_size_z_" value="$(arg map_size_z)"/>
+            <arg name="odometry_topic" value="$(arg odom_topic)"/>
+        </include>
+    </group> 
+
+    <group ns="quad_8">
+        <arg name="drone_id" value="8"/>
+        <arg name="init_x" value="-15.0"/>
+        <arg name="init_y" value="7.0"/>
+        <arg name="init_z" value="0.1"/>
+        <!-- use simulator -->
+        <include file="$(find ego_planner)/launch/include/semi_sim_simulator.xml">
+            <arg name="drone_id" value="$(arg drone_id)"/>
+            <arg name="init_x_" value="$(arg init_x)"/>
+            <arg name="init_y_" value="$(arg init_y)"/>
+            <arg name="init_z_" value="$(arg init_z)"/>
+            <arg name="map_size_x_" value="$(arg map_size_x)"/>
+            <arg name="map_size_y_" value="$(arg map_size_y)"/>
+            <arg name="map_size_z_" value="$(arg map_size_z)"/>
+            <arg name="odometry_topic" value="$(arg odom_topic)"/>
+        </include>
+    </group> 
+
+    <group ns="quad_9">
+        <arg name="drone_id" value="9"/>
+        <arg name="init_x" value="-15.0"/>
+        <arg name="init_y" value="9.0"/>
+        <arg name="init_z" value="0.1"/>
+        <!-- use simulator -->
+        <include file="$(find ego_planner)/launch/include/semi_sim_simulator.xml">
+            <arg name="drone_id" value="$(arg drone_id)"/>
+            <arg name="init_x_" value="$(arg init_x)"/>
+            <arg name="init_y_" value="$(arg init_y)"/>
+            <arg name="init_z_" value="$(arg init_z)"/>
+            <arg name="map_size_x_" value="$(arg map_size_x)"/>
+            <arg name="map_size_y_" value="$(arg map_size_y)"/>
+            <arg name="map_size_z_" value="$(arg map_size_z)"/>
+            <arg name="odometry_topic" value="$(arg odom_topic)"/>
+        </include>
+    </group> 
+
 </launch>

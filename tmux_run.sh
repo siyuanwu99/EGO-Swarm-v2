@@ -25,9 +25,12 @@ declare -a robot_groups
 declare -a working_ips
 declare -a working_names
 declare -a working_groups
-declare -a working_x
-declare -a working_y
-declare -a working_z
+declare -a working_init_x
+declare -a working_init_y
+declare -a working_init_z
+declare -a working_goal_x
+declare -a working_goal_y
+declare -a working_goal_z
 
 # Extracting robot names, IPs, and groups
 ping_robots() {
@@ -96,13 +99,16 @@ load_robots() {
 	working_z=()
 	if [ -f $TEMP_FILE ]; then
 		echo "Loading robots from $TEMP_FILE..."
-		while IFS=, read -r name ip sensor x y z; do
+		while IFS=, read -r name ip sensor x y z gx gy gz; do
 			working_ips+=("$ip")
 			working_names+=("$name")
 			working_groups+=("$sensor")
-			working_x+=("$x")
-			working_y+=("$y")
-			working_z+=("$z")
+			working_init_x+=("$x")
+			working_init_y+=("$y")
+			working_init_z+=("$z")
+			working_goal_x+=("$gx")
+			working_goal_y+=("$gy")
+			working_goal_z+=("$gz")
 		done <"$TEMP_FILE"
 	else
 		echo "File $TEMP_FILE not found! Please run read_robots first."
@@ -118,10 +124,13 @@ load_robots() {
 		name=${working_names[$i]}
 		ip=${working_ips[$i]}
 		group=${working_groups[$i]}
-		x=${working_x[$i]}
-		y=${working_y[$i]}
-		z=${working_z[$i]}
-		echo "$name $ip $group ($x,$y,$z)"
+		x=${working_init_x[$i]}
+		y=${working_init_y[$i]}
+		z=${working_init_z[$i]}
+		gx=${working_goal_x[$i]}
+		gy=${working_goal_y[$i]}
+		gz=${working_goal_z[$i]}
+		echo "$name $ip $group ($x,$y,$z) -> ($gx,$gy,$gz)"
 	done
 }
 
@@ -132,11 +141,20 @@ run_half_sim() {
 		name=${working_names[$i]}
 		ip=${working_ips[$i]}
 		group=${working_groups[$i]}
-		x=${working_x[$i]}
-		y=${working_y[$i]}
-		z=${working_z[$i]}
+		x=${working_init_x[$i]}
+		y=${working_init_y[$i]}
+		z=${working_init_z[$i]}
+		gx=${working_goal_x[$i]}
+		gy=${working_goal_y[$i]}
+		gz=${working_goal_z[$i]}
 
-		echo "Connecting to $name with sensor $group..."
+		echo "Connecting to $name with group '$group'..."
+
+		if [ "$group" == "nv" ]; then
+			cmd="devel/setup.zsh"
+		elif [ "$group" == "nvidia" ]; then
+			cmd="devel/setup.bash"
+		fi
 
 		# SSH and tmux session configuration
 		ssh -t "$group@$ip" "
@@ -146,17 +164,17 @@ run_half_sim() {
 				tmux split-window -v -p 50
 
 				for pane in {1..3}; do
-    				tmux send-keys -t $name:1.\$pane 'cd ~/ego_swarm_ws && source devel/setup.bash' C-m
+    				tmux send-keys -t $name:1.\$pane 'cd ~/ego_swarm_ws && source $cmd' C-m
 				done
 
 				tmux send-keys -t $name:1.1 'roslaunch swarm_ros_bridge onboard_bridge.launch config:=semi_sim_swarm_drone.yaml' C-m
-				tmux send-keys -t $name:1.2 'sleep 3 && roslaunch ego_planner semi_sim_run_onboard.launch drone_id:=$i init_x:=$x init_y:=$y init_z:=$z' C-m
+				tmux send-keys -t $name:1.2 'sleep 5 && roslaunch ego_planner semi_sim_run_onboard.launch drone_id:=$i init_x:=$x init_y:=$y init_z:=$z target0_x:=$gx target0_y:=$gy target0_z:=$gz' C-m
 
 				echo '[$name] Initialized.'
 
         exit;
     	"
-		ssh -X -t "$group@$ip" "gnome-terminal -- tmux attach -t $name"
+		# ssh -X -t "$group@$ip" "gnome-terminal -- tmux attach -t $name"
 		echo "Started tmux session for $name"
 	done
 }

@@ -17,7 +17,6 @@ Panels:
         - /drone11/Mapping1/map inflate1
         - /drone11/Simulation1
         - /drone11/Simulation1/robot1
-        - /drone21
         - /drone21/Planning1/optimal_traj1
         - /drone21/Planning1/drone_path1
         - /drone21/Mapping1
@@ -25,18 +24,13 @@ Panels:
         - /drone21/Simulation1
         - /drone21/Simulation1/robot1
         - /drone31/Mapping1/map inflate1
+        - /drone41
         - /drone41/Planning1/optimal_traj1
         - /drone41/Planning1/drone_path1
-        - /drone41/Mapping1
-        - /drone41/Mapping1/map inflate1
         - /drone51/Mapping1
         - /drone51/Mapping1/map inflate1
-        - /drone61/Planning1/drone_path1
-        - /drone61/Mapping1/map inflate1
         - /drone71/Planning1/InitTraj1
         - /drone71/Planning1/drone_path1
-        - /drone71/Mapping1
-        - /drone71/Mapping1/map inflate1
         - /drone71/Simulation1/robot1
         - /drone81/Planning1/drone_path1
         - /drone81/Mapping1/map inflate1
@@ -77,119 +71,10 @@ Panels:
         - /drone151/Mapping1
         - /drone151/Mapping1/map inflate1
         - /drone151/Simulation1/robot1
-        - /drone161/Planning1
-        - /drone161/Planning1/optimal_traj1
-        - /drone161/Planning1/drone_path1
-        - /drone161/Mapping1
-        - /drone161/Mapping1/map inflate1
-        - /drone161/Simulation1/robot1
-        - /drone171/Planning1
-        - /drone171/Planning1/optimal_traj1
-        - /drone171/Planning1/drone_path1
-        - /drone171/Mapping1
-        - /drone171/Mapping1/map inflate1
-        - /drone171/Simulation1/robot1
-        - /drone181/Planning1
-        - /drone181/Planning1/optimal_traj1
-        - /drone181/Planning1/drone_path1
-        - /drone181/Mapping1
-        - /drone181/Mapping1/map inflate1
-        - /drone181/Simulation1
-        - /drone181/Simulation1/robot1
-        - /drone191/Planning1
-        - /drone191/Planning1/goal_point1
-        - /drone191/Planning1/optimal_traj1
-        - /drone191/Planning1/drone_path1
-        - /drone191/Mapping1
-        - /drone191/Mapping1/map inflate1
-        - /drone191/Simulation1
-        - /drone191/Simulation1/robot1
-        - /drone201/Planning1
-        - /drone201/Planning1/drone_path1
-        - /drone201/Mapping1
-        - /drone201/Mapping1/map inflate1
-        - /drone201/Simulation1
-        - /drone201/Simulation1/robot1
-        - /drone211/Planning1
-        - /drone211/Planning1/drone_path1
-        - /drone211/Mapping1
-        - /drone211/Mapping1/map inflate1
-        - /drone221/Planning1/drone_path1
-        - /drone221/Mapping1
-        - /drone221/Mapping1/map inflate1
-        - /drone231/Planning1
-        - /drone231/Planning1/drone_path1
-        - /drone231/Mapping1
-        - /drone231/Mapping1/map inflate1
-        - /drone241/Planning1
-        - /drone241/Planning1/drone_path1
-        - /drone241/Mapping1
-        - /drone241/Mapping1/map inflate1
-        - /drone251/Planning1
-        - /drone251/Planning1/drone_path1
-        - /drone251/Mapping1
-        - /drone251/Mapping1/map inflate1
-        - /drone261/Planning1
-        - /drone261/Planning1/drone_path1
-        - /drone261/Mapping1
-        - /drone261/Mapping1/map inflate1
-        - /drone271/Planning1
-        - /drone271/Planning1/drone_path1
-        - /drone271/Mapping1
-        - /drone271/Mapping1/map inflate1
-        - /drone281/Planning1
-        - /drone281/Planning1/drone_path1
-        - /drone281/Mapping1/map inflate1
-        - /drone291/Planning1
-        - /drone291/Planning1/drone_path1
-        - /drone291/Mapping1
-        - /drone291/Mapping1/map inflate1
-        - /drone301/Mapping1
-        - /drone301/Mapping1/map inflate1
-        - /drone311/Planning1
-        - /drone311/Planning1/drone_path1
-        - /drone311/Mapping1
-        - /drone311/Mapping1/map inflate1
-        - /drone321/Planning1
-        - /drone321/Planning1/drone_path1
-        - /drone321/Mapping1
-        - /drone321/Mapping1/map inflate1
-        - /drone331/Planning1
-        - /drone331/Planning1/drone_path1
-        - /drone331/Mapping1
-        - /drone331/Mapping1/map inflate1
-        - /drone341/Planning1
-        - /drone341/Planning1/drone_path1
-        - /drone341/Mapping1
-        - /drone341/Mapping1/map inflate1
-        - /drone351/Planning1
-        - /drone351/Planning1/drone_path1
-        - /drone351/Mapping1
-        - /drone351/Mapping1/map inflate1
-        - /drone361/Planning1
-        - /drone361/Planning1/drone_path1
-        - /drone361/Mapping1
-        - /drone361/Mapping1/map inflate1
-        - /drone371/Planning1
-        - /drone371/Planning1/drone_path1
-        - /drone371/Mapping1
-        - /drone371/Mapping1/map inflate1
-        - /drone381/Planning1
-        - /drone381/Planning1/drone_path1
-        - /drone381/Mapping1
-        - /drone381/Mapping1/map inflate1
-        - /drone391/Planning1
-        - /drone391/Planning1/drone_path1
-        - /drone391/Mapping1
-        - /drone391/Mapping1/map inflate1
-        - /drone401/Mapping1
-        - /drone401/Mapping1/map inflate1
-        - /drone411/Planning1/drone_path1
-        - /drone411/Mapping1/map inflate1
         - /MovingObstaclesJoystick01/PredictedTrajectories1
         - /Odometry1
       Splitter Ratio: 0.4771505296230316
-    Tree Height: 1022
+    Tree Height: 823
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -277,7 +162,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_0_ego_planner_node/goal_point
+              Marker Topic: /quad_0/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -285,7 +170,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_0_ego_planner_node/global_list
+              Marker Topic: /quad_0/ego_planner_node/global_list
               Name: global_path
               Namespaces:
                 {}
@@ -301,7 +186,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_0_ego_planner_node/failed_list
+              Marker Topic: /quad_0/ego_planner_node/failed_list
               Name: FailedList
               Namespaces:
                 {}
@@ -317,7 +202,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_0_ego_planner_node/init_list
+              Marker Topic: /quad_0/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -393,7 +278,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_0_pcl_render_node/colordepth
+              Image Topic: /quad_0/pcl_render_node/colordepth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -413,7 +298,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone__ego_planner_node/goal_point
+              Marker Topic: /quad_0/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -432,7 +317,7 @@ Visualization Manager:
               Marker Topic: /quad_1/ego_planner_node/optimal_list
               Name: optimal_traj
               Namespaces:
-                "": true
+                {}
               Queue Size: 100
               Value: true
             - Class: rviz/Marker
@@ -445,7 +330,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_1_ego_planner_node/init_list
+              Marker Topic: /quad_1/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -521,7 +406,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_1_pcl_render_node/depth
+              Image Topic: /quad_1/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -541,7 +426,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_2_ego_planner_node/goal_point
+              Marker Topic: /quad_2/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -573,7 +458,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_2_ego_planner_node/init_list
+              Marker Topic: /quad_2/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -649,7 +534,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_2_pcl_render_node/depth
+              Image Topic: /quad_2/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -669,7 +554,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_3_ego_planner_node/goal_point
+              Marker Topic: /quad_3/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -685,7 +570,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_3_ego_planner_node/optimal_list
+              Marker Topic: /quad_3/ego_planner_node/optimal_list
               Name: optimal_traj
               Namespaces:
                 {}
@@ -701,7 +586,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_3_ego_planner_node/init_list
+              Marker Topic: /quad_3/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -728,7 +613,7 @@ Visualization Manager:
               Radius: 0.029999999329447746
               Shaft Diameter: 0.10000000149011612
               Shaft Length: 0.10000000149011612
-              Topic: /drone_3_odom_visualization/path
+              Topic: /quad_3/odom_visualization/path
               Unreliable: false
               Value: true
           Enabled: true
@@ -758,7 +643,7 @@ Visualization Manager:
               Size (Pixels): 3
               Size (m): 0.10000000149011612
               Style: Flat Squares
-              Topic: /drone_3_ego_planner_node/grid_map/occupancy_inflate
+              Topic: /quad_3/ego_planner_node/grid_map/occupancy_inflate
               Unreliable: false
               Use Fixed Frame: true
               Use rainbow: true
@@ -769,15 +654,15 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_3_odom_visualization/robot
+              Marker Topic: /quad_3/odom_visualization/robot
               Name: robot
               Namespaces:
-                {}
+                drone: true
               Queue Size: 100
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_3_pcl_render_node/depth
+              Image Topic: /quad_3/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -797,7 +682,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_4_ego_planner_node/goal_point
+              Marker Topic: /quad_4/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -813,7 +698,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_4_ego_planner_node/optimal_list
+              Marker Topic: /quad_4/ego_planner_node/optimal_list
               Name: optimal_traj
               Namespaces:
                 {}
@@ -829,7 +714,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_4_ego_planner_node/init_list
+              Marker Topic: /quad_4/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -856,7 +741,7 @@ Visualization Manager:
               Radius: 0.029999999329447746
               Shaft Diameter: 0.10000000149011612
               Shaft Length: 0.10000000149011612
-              Topic: /drone_4_odom_visualization/path
+              Topic: /quad_4/odom_visualization/path
               Unreliable: false
               Value: true
           Enabled: true
@@ -886,7 +771,7 @@ Visualization Manager:
               Size (Pixels): 3
               Size (m): 0.10000000149011612
               Style: Flat Squares
-              Topic: /drone_4_ego_planner_node/grid_map/occupancy_inflate
+              Topic: /quad_4/ego_planner_node/grid_map/occupancy_inflate
               Unreliable: false
               Use Fixed Frame: true
               Use rainbow: true
@@ -897,15 +782,15 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_4_odom_visualization/robot
+              Marker Topic: /quad_4/odom_visualization/robot
               Name: robot
               Namespaces:
-                {}
+                drone: true
               Queue Size: 100
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_4_pcl_render_node/depth
+              Image Topic: /quad_4/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -925,7 +810,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_5_ego_planner_node/goal_point
+              Marker Topic: /quad_5/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -941,7 +826,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_5_ego_planner_node/optimal_list
+              Marker Topic: /quad_5/ego_planner_node/optimal_list
               Name: optimal_traj
               Namespaces:
                 {}
@@ -957,7 +842,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_5_ego_planner_node/init_list
+              Marker Topic: /quad_5/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -984,7 +869,7 @@ Visualization Manager:
               Radius: 0.029999999329447746
               Shaft Diameter: 0.10000000149011612
               Shaft Length: 0.10000000149011612
-              Topic: /drone_5_odom_visualization/path
+              Topic: /quad_5/odom_visualization/path
               Unreliable: false
               Value: true
           Enabled: true
@@ -1014,7 +899,7 @@ Visualization Manager:
               Size (Pixels): 3
               Size (m): 0.10000000149011612
               Style: Flat Squares
-              Topic: /drone_5_ego_planner_node/grid_map/occupancy_inflate
+              Topic: /quad_5/ego_planner_node/grid_map/occupancy_inflate
               Unreliable: false
               Use Fixed Frame: true
               Use rainbow: true
@@ -1025,15 +910,15 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_5_odom_visualization/robot
+              Marker Topic: /quad_5/odom_visualization/robot
               Name: robot
               Namespaces:
-                {}
+                drone: true
               Queue Size: 100
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -1053,7 +938,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_6_ego_planner_node/goal_point
+              Marker Topic: /quad_6/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -1069,7 +954,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_6_ego_planner_node/optimal_list
+              Marker Topic: /quad_6/ego_planner_node/optimal_list
               Name: optimal_traj
               Namespaces:
                 {}
@@ -1085,7 +970,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_6_ego_planner_node/init_list
+              Marker Topic: /quad_6/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -1112,7 +997,7 @@ Visualization Manager:
               Radius: 0.029999999329447746
               Shaft Diameter: 0.10000000149011612
               Shaft Length: 0.10000000149011612
-              Topic: /drone_6_odom_visualization/path
+              Topic: /quad_6/odom_visualization/path
               Unreliable: false
               Value: true
           Enabled: true
@@ -1142,7 +1027,7 @@ Visualization Manager:
               Size (Pixels): 3
               Size (m): 0.10000000149011612
               Style: Flat Squares
-              Topic: /drone_6_ego_planner_node/grid_map/occupancy_inflate
+              Topic: /quad_6/pcl_render_node/cloud
               Unreliable: false
               Use Fixed Frame: true
               Use rainbow: true
@@ -1153,15 +1038,15 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_6_odom_visualization/robot
+              Marker Topic: /quad_6/odom_visualization/robot
               Name: robot
               Namespaces:
-                {}
+                drone: true
               Queue Size: 100
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_6_pcl_render_node/depth
+              Image Topic: /quad_6/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -1181,7 +1066,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_7_ego_planner_node/goal_point
+              Marker Topic: /quad_7/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -1197,7 +1082,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_7_ego_planner_node/optimal_list
+              Marker Topic: /quad_7/ego_planner_node/optimal_list
               Name: optimal_traj
               Namespaces:
                 {}
@@ -1213,7 +1098,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_7_ego_planner_node/init_list
+              Marker Topic: /quad_7/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -1240,7 +1125,7 @@ Visualization Manager:
               Radius: 0.029999999329447746
               Shaft Diameter: 0.10000000149011612
               Shaft Length: 0.10000000149011612
-              Topic: /drone_7_odom_visualization/path
+              Topic: /quad_7/odom_visualization/path
               Unreliable: false
               Value: true
           Enabled: true
@@ -1270,7 +1155,7 @@ Visualization Manager:
               Size (Pixels): 3
               Size (m): 0.10000000149011612
               Style: Flat Squares
-              Topic: /drone_7_ego_planner_node/grid_map/occupancy_inflate
+              Topic: /quad_7/ego_planner_node/grid_map/occupancy_inflate
               Unreliable: false
               Use Fixed Frame: true
               Use rainbow: true
@@ -1281,15 +1166,15 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_7_odom_visualization/robot
+              Marker Topic: /quad_7/odom_visualization/robot
               Name: robot
               Namespaces:
-                {}
+                drone: true
               Queue Size: 100
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -1309,7 +1194,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_8_ego_planner_node/goal_point
+              Marker Topic: /quad_8/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -1325,7 +1210,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_8_ego_planner_node/optimal_list
+              Marker Topic: /quad_8/ego_planner_node/optimal_list
               Name: optimal_traj
               Namespaces:
                 {}
@@ -1341,7 +1226,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_8_ego_planner_node/init_list
+              Marker Topic: /quad_8/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -1368,7 +1253,7 @@ Visualization Manager:
               Radius: 0.029999999329447746
               Shaft Diameter: 0.10000000149011612
               Shaft Length: 0.10000000149011612
-              Topic: /drone_8_odom_visualization/path
+              Topic: /quad_8/odom_visualization/path
               Unreliable: false
               Value: true
           Enabled: true
@@ -1398,7 +1283,7 @@ Visualization Manager:
               Size (Pixels): 3
               Size (m): 0.10000000149011612
               Style: Flat Squares
-              Topic: /drone_8_ego_planner_node/grid_map/occupancy_inflate
+              Topic: /quad_8/ego_planner_node/grid_map/occupancy_inflate
               Unreliable: false
               Use Fixed Frame: true
               Use rainbow: true
@@ -1409,15 +1294,15 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_8_odom_visualization/robot
+              Marker Topic: /quad_8/odom_visualization/robot
               Name: robot
               Namespaces:
-                {}
+                drone: true
               Queue Size: 100
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -1437,7 +1322,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
+              Marker Topic: /quad_9/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -1453,7 +1338,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_9_ego_planner_node/optimal_list
+              Marker Topic: /quad_9/ego_planner_node/optimal_list
               Name: optimal_traj
               Namespaces:
                 {}
@@ -1469,7 +1354,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
+              Marker Topic: /quad_9/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -1496,7 +1381,7 @@ Visualization Manager:
               Radius: 0.029999999329447746
               Shaft Diameter: 0.10000000149011612
               Shaft Length: 0.10000000149011612
-              Topic: /drone_9_odom_visualization/path
+              Topic: /quad_9/odom_visualization/path
               Unreliable: false
               Value: true
           Enabled: true
@@ -1526,7 +1411,7 @@ Visualization Manager:
               Size (Pixels): 3
               Size (m): 0.10000000149011612
               Style: Flat Squares
-              Topic: /drone_9_ego_planner_node/grid_map/occupancy_inflate
+              Topic: /quad_9/ego_planner_node/grid_map/occupancy_inflate
               Unreliable: false
               Use Fixed Frame: true
               Use rainbow: true
@@ -1537,15 +1422,15 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: true
-              Marker Topic: /drone_9_odom_visualization/robot
+              Marker Topic: /quad_9/odom_visualization/robot
               Name: robot
               Namespaces:
-                {}
+                drone: true
               Queue Size: 100
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -1565,7 +1450,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
+              Marker Topic: /quad_9/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -1597,7 +1482,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
+              Marker Topic: /quad_9/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -1673,7 +1558,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -1693,7 +1578,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
+              Marker Topic: /quad_9/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -1725,7 +1610,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
+              Marker Topic: /quad_9/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -1801,7 +1686,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -1821,7 +1706,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
+              Marker Topic: /quad_9/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -1853,7 +1738,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
+              Marker Topic: /quad_9/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -1929,7 +1814,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -1949,7 +1834,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
+              Marker Topic: /quad_9/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -1981,7 +1866,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
+              Marker Topic: /quad_9/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -2038,7 +1923,7 @@ Visualization Manager:
               Size (Pixels): 3
               Size (m): 0.10000000149011612
               Style: Flat Squares
-              Topic: /drone_9_ego_planner_node/grid_map/occupancy_inflate
+              Topic: /quad_9/ego_planner_node/grid_map/occupancy_inflate
               Unreliable: false
               Use Fixed Frame: true
               Use rainbow: true
@@ -2057,7 +1942,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -2077,7 +1962,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
+              Marker Topic: /quad_9/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -2109,7 +1994,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
+              Marker Topic: /quad_9/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -2185,7 +2070,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -2205,7 +2090,7 @@ Visualization Manager:
           Displays:
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
+              Marker Topic: /quad_9/ego_planner_node/goal_point
               Name: goal_point
               Namespaces:
                 {}
@@ -2237,7 +2122,7 @@ Visualization Manager:
               Value: false
             - Class: rviz/Marker
               Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
+              Marker Topic: /quad_9/ego_planner_node/init_list
               Name: InitTraj
               Namespaces:
                 {}
@@ -2313,7 +2198,7 @@ Visualization Manager:
               Value: true
             - Class: rviz/Image
               Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
+              Image Topic: /quad_5/pcl_render_node/depth
               Max Value: 1
               Median window: 5
               Min Value: 0
@@ -2327,3502 +2212,6 @@ Visualization Manager:
           Name: Simulation
       Enabled: true
       Name: drone15
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_16_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 190; 120; 121
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_16_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.3399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 190; 120; 121
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_16_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_16_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone16
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_17_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 0; 170; 255
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_17_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.3399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 0; 170; 255
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_17_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_17_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone17
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_18_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 226; 0; 158
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_18_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.3399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 226; 0; 158
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_18_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_18_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone18
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_19_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_19_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 170; 85; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_19_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.3399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 170; 85; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_19_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_19_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_5_pcl_render_node/depth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone19
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_20_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_9_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 29; 108; 212
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_20_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.3399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 29; 108; 212
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_20_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_20_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_20_pcl_render_node/depth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone20
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_21_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_21_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_21_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_21_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_21_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 170; 170; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_21_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 170; 170; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_21_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_21_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_21_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone21
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_22_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_22_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_22_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_22_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_22_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 170; 170; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_22_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 170; 170; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_22_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_22_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_22_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone22
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_23_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_23_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_23_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_23_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_23_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 170; 0; 255
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_23_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 170; 0; 255
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_23_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_23_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_23_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone23
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_24_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_24_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_24_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_24_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_24_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 0; 170; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_24_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 0; 170; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_24_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_24_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_24_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone24
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_25_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_25_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_25_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_25_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_25_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 255; 0; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_25_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 255; 0; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_25_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_25_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_25_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone25
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_26_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_26_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_26_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_26_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_26_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 190; 120; 121
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_26_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 190; 120; 121
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_26_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_26_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_26_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone26
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_27_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_27_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_27_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_27_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_27_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 0; 170; 255
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_27_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 0; 170; 255
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_27_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_27_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_27_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone27
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_28_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_28_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_28_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_28_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_28_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 226; 0; 158
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_28_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 226; 0; 158
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_28_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_28_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_28_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone28
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_29_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_29_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_29_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_29_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_29_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 170; 85; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_29_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 170; 85; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_29_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_29_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_29_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone29
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_30_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_30_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_30_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_30_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_30_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 29; 108; 212
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_30_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 29; 108; 212
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_30_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_30_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_30_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone30
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_31_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_31_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_31_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_31_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_31_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 255; 170; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_31_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 255; 170; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_31_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_31_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_31_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone31
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_32_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_32_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_32_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_32_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_32_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 170; 170; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_32_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 170; 170; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_32_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_32_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_32_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone32
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_33_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_33_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_33_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_33_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_33_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 170; 0; 255
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_33_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 170; 0; 255
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_33_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_33_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_33_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone33
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_34_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_34_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_34_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_34_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_34_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 0; 170; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_34_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 0; 170; 0
-              Color Transformer: Intensity
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_34_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_34_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_34_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone34
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_35_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_35_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_35_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_35_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_35_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 255; 0; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_35_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 255; 0; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_35_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_35_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_35_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone35
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_36_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_36_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_36_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_36_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_36_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 190; 120; 121
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_36_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 190; 120; 121
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_36_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_36_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_36_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone36
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_37_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_37_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_37_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_37_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_37_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 0; 170; 255
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_37_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 0; 170; 255
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_37_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_37_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_37_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone37
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_38_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_38_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_38_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_38_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_38_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 226; 0; 158
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_38_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 226; 0; 158
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_38_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_38_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_38_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone38
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_39_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_39_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_39_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_39_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_39_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 170; 85; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_39_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 170; 85; 0
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_39_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_39_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_39_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone39
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_40_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_40_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_40_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_40_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_40_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 29; 108; 212
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_40_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 29; 108; 212
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_40_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_40_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_40_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone40
-    - Class: rviz/Group
-      Displays:
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_40_ego_planner_node/goal_point
-              Name: goal_point
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_40_ego_planner_node/global_list
-              Name: global_path
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_41_ego_planner_node/optimal_list
-              Name: optimal_traj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_40_ego_planner_node/failed_list
-              Name: FailedList
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /ego_planner_node/a_star_list
-              Name: AStar
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Class: rviz/Marker
-              Enabled: false
-              Marker Topic: /drone_40_ego_planner_node/init_list
-              Name: InitTraj
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: false
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz/Path
-              Color: 115; 210; 22
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Billboards
-              Line Width: 0.10000000149011612
-              Name: drone_path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Queue Size: 10
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic: /drone_41_odom_visualization/path
-              Unreliable: false
-              Value: true
-          Enabled: true
-          Name: Planning
-        - Class: rviz/Group
-          Displays:
-            - Alpha: 1
-              Autocompute Intensity Bounds: true
-              Autocompute Value Bounds:
-                Max Value: 2.8399999141693115
-                Min Value: 0.03999999910593033
-                Value: true
-              Axis: Z
-              Channel Name: intensity
-              Class: rviz/PointCloud2
-              Color: 115; 210; 22
-              Color Transformer: FlatColor
-              Decay Time: 0
-              Enabled: true
-              Invert Rainbow: false
-              Max Color: 255; 255; 255
-              Min Color: 0; 0; 0
-              Name: map inflate
-              Position Transformer: XYZ
-              Queue Size: 10
-              Selectable: false
-              Size (Pixels): 3
-              Size (m): 0.10000000149011612
-              Style: Flat Squares
-              Topic: /drone_41_ego_planner_node/grid_map/occupancy_inflate
-              Unreliable: false
-              Use Fixed Frame: true
-              Use rainbow: true
-              Value: true
-          Enabled: true
-          Name: Mapping
-        - Class: rviz/Group
-          Displays:
-            - Class: rviz/Marker
-              Enabled: true
-              Marker Topic: /drone_41_odom_visualization/robot
-              Name: robot
-              Namespaces:
-                {}
-              Queue Size: 100
-              Value: true
-            - Class: rviz/Image
-              Enabled: false
-              Image Topic: /drone_40_pcl_render_node/colordepth
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Queue Size: 2
-              Transport Hint: raw
-              Unreliable: false
-              Value: false
-          Enabled: true
-          Name: Simulation
-      Enabled: true
-      Name: drone41
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /new_goals_arrow
@@ -5950,6 +2339,134 @@ Visualization Manager:
       Topic: /quad_1/odometry
       Unreliable: false
       Value: false
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Marker
+              Enabled: false
+              Marker Topic: /quad_9/ego_planner_node/goal_point
+              Name: goal_point
+              Namespaces:
+                {}
+              Queue Size: 100
+              Value: false
+            - Class: rviz/Marker
+              Enabled: false
+              Marker Topic: /ego_planner_node/global_list
+              Name: global_path
+              Namespaces:
+                {}
+              Queue Size: 100
+              Value: false
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /drone_15_ego_planner_node/optimal_list
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Queue Size: 100
+              Value: true
+            - Class: rviz/Marker
+              Enabled: false
+              Marker Topic: /ego_planner_node/a_star_list
+              Name: AStar
+              Namespaces:
+                {}
+              Queue Size: 100
+              Value: false
+            - Class: rviz/Marker
+              Enabled: false
+              Marker Topic: /quad_9/ego_planner_node/init_list
+              Name: InitTraj
+              Namespaces:
+                {}
+              Queue Size: 100
+              Value: false
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 255; 0; 0
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Queue Size: 10
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic: /drone_15_odom_visualization/path
+              Unreliable: false
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 2.3399999141693115
+                Min Value: 0.03999999910593033
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 0; 0
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Min Color: 0; 0; 0
+              Name: map inflate
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: false
+              Size (Pixels): 3
+              Size (m): 0.10000000149011612
+              Style: Flat Squares
+              Topic: /drone_15_ego_planner_node/grid_map/occupancy_inflate
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+          Enabled: true
+          Name: Mapping
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /drone_15_odom_visualization/robot
+              Name: robot
+              Namespaces:
+                {}
+              Queue Size: 100
+              Value: true
+            - Class: rviz/Image
+              Enabled: false
+              Image Topic: /quad_5/pcl_render_node/depth
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: depth
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: raw
+              Unreliable: false
+              Value: false
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone15
   Enabled: true
   Global Options:
     Background Color: 255; 255; 255
@@ -5980,7 +2497,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 37.96240997314453
+      Distance: 37.03644561767578
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -5988,17 +2505,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -3.5112831592559814
-        Y: -8.455758094787598
+        X: -8.357965469360352
+        Y: -0.5340920686721802
         Z: -1.9391085515962914e-05
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 1.519796371459961
       Target Frame: <Fixed Frame>
-      Yaw: 4.696475505828857
+      Yaw: 3.136474132537842
     Saved:
       - Class: rviz/FPS
         Enable Stereo Rendering:
@@ -6133,11 +2650,11 @@ Visualization Manager:
         Yaw: 5.702403545379639
 Window Geometry:
   Displays:
-    collapsed: false
-  Height: 1376
-  Hide Left Dock: false
+    collapsed: true
+  Height: 1356
+  Hide Left Dock: true
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001c500000506fc0200000039fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000043b000000c900fffffffb0000000a00560069006500770073010000047e000000c5000000a400fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d00650072006100000001d1000000b50000000000000000fb0000000a0049006d00610067006502000001a2000001e1000000f8000000b5fb0000000a006400650070007400680000000265000000c00000001600fffffffb0000000a0049006d00610067006501000003f30000015b0000000000000000fb0000000a0049006d00610067006501000003f4000001190000000000000000fb0000000a0064006500700074006800000004a2000000ac0000001600fffffffb0000000a006400650070007400680000000346000002180000001600fffffffb0000000a0064006500700074006800000003e20000017c0000001600fffffffb0000000a006400650070007400680000000481000000cd0000001600fffffffb0000000a006400650070007400680000000429000001250000001600fffffffb0000000a0064006500700074006800000003b7000000af0000001600fffffffb0000000a0064006500700074006800000003d5000000b50000001600fffffffb0000000a006400650070007400680000000444000001260000001600fffffffb0000000a00640065007000740068000000041f0000014b0000001600fffffffb0000000a0064006500700074006800000001b8000000160000001600fffffffb0000000a0064006500700074006800000001c1000000160000001600fffffffb0000000a0064006500700074006800000004b1000000550000001600fffffffb0000000a006400650070007400680000000505000000650000001600fffffffb0000000a006400650070007400680000000502000000680000001600fffffffb0000000a0064006500700074006800000004f9000000710000001600fffffffb0000000a0064006500700074006800000003dd0000018d0000001600fffffffb0000000a0064006500700074006800000004de0000008c0000001600fffffffb0000000a0064006500700074006800000004cc0000009e0000001600fffffffb0000000a00640065007000740068000000048a000000c40000001600fffffffb0000000a0064006500700074006800000004aa000000c00000001600fffffffb0000000a0049006d00610067006500000003fa000001540000000000000000fb0000000a0049006d00610067006501000002e1000002890000000000000000fb0000000a006400650070007400680000000495000000d50000001600fffffffb0000000a0064006500700074006800000001b60000001b0000001600fffffffb0000000a0064006500700074006800000001c10000002f0000001600fffffffb0000000a0064006500700074006800000001d3000000300000001600fffffffb0000000a0064006500700074006800000001e6000000320000001600fffffffb0000000a0064006500700074006800000004dc0000008e0000001600fffffffb0000000a0064006500700074006800000004f4000000760000001600fffffffb0000000a0064006500700074006800000004f2000000780000001600fffffffb0000000a006400650070007400680000000503000000670000001600fffffffb0000000a006400650070007400680000000509000000610000001600fffffffb0000000a006400650070007400680000000511000000590000001600fffffffb0000000a006400650070007400680000000517000000530000001600fffffffb0000000a00640065007000740068000000051d0000004d0000001600fffffffb0000000a00640065007000740068000000051d0000004d0000001600fffffffb0000000a006400650070007400680000000526000000440000001600fffffffb0000000a00640065007000740068000000052b0000003f0000001600fffffffb0000000a00640065007000740068000000052b0000003f0000001600fffffffb0000000a00640065007000740068000000052f0000003b0000001600fffffffb0000000a006400650070007400680000000532000000380000001600fffffffb0000000a006400650070007400680000000536000000340000001600fffffffb0000000a00640065007000740068000000046b000000d80000001600ffffff000000010000010f00000385fc0200000002fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006100000003bfc0100000002fb0000000800540069006d00650000000000000006100000041800fffffffb0000000800540069006d00650100000000000004500000000000000000000007ed0000050600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001c5000004eefc020000003afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003f00000377000000cc00fffffffb0000000a0056006900650077007300000003bc00000171000000a900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d00650072006100000001d1000000b50000000000000000fb0000000a0049006d00610067006502000001a2000001e1000000f8000000b5fb0000000a006400650070007400680000000265000000c00000001700fffffffb0000000a0049006d00610067006501000003f30000015b0000000000000000fb0000000a0049006d00610067006501000003f4000001190000000000000000fb0000000a0064006500700074006800000004a2000000ac0000001700fffffffb0000000a006400650070007400680000000346000002180000001700fffffffb0000000a0064006500700074006800000003e20000017c0000001700fffffffb0000000a006400650070007400680000000481000000cd0000001700fffffffb0000000a006400650070007400680000000429000001250000001700fffffffb0000000a0064006500700074006800000003b7000000af0000001700fffffffb0000000a0064006500700074006800000003d5000000b50000001700fffffffb0000000a006400650070007400680000000444000001260000001700fffffffb0000000a00640065007000740068000000041f0000014b0000001700fffffffb0000000a0064006500700074006800000001b8000000160000001700fffffffb0000000a0064006500700074006800000001c1000000160000001700fffffffb0000000a0064006500700074006800000004b1000000550000001700fffffffb0000000a006400650070007400680000000505000000650000001700fffffffb0000000a006400650070007400680000000502000000680000001700fffffffb0000000a0064006500700074006800000004f9000000710000001700fffffffb0000000a0064006500700074006800000003dd0000018d0000001700fffffffb0000000a0064006500700074006800000004de0000008c0000000000000000fb0000000a0064006500700074006800000004cc0000009e0000000000000000fb0000000a00640065007000740068000000048a000000c40000000000000000fb0000000a0064006500700074006800000004aa000000c00000000000000000fb0000000a0049006d00610067006500000003fa000001540000000000000000fb0000000a0049006d00610067006501000002e1000002890000000000000000fb0000000a006400650070007400680000000495000000d50000000000000000fb0000000a0064006500700074006800000001b60000001b0000000000000000fb0000000a0064006500700074006800000001c10000002f0000000000000000fb0000000a0064006500700074006800000001d3000000300000000000000000fb0000000a0064006500700074006800000001e6000000320000000000000000fb0000000a0064006500700074006800000004dc0000008e0000000000000000fb0000000a0064006500700074006800000004f4000000760000000000000000fb0000000a0064006500700074006800000004f2000000780000000000000000fb0000000a006400650070007400680000000503000000670000000000000000fb0000000a006400650070007400680000000509000000610000000000000000fb0000000a006400650070007400680000000511000000590000000000000000fb0000000a006400650070007400680000000517000000530000000000000000fb0000000a00640065007000740068000000051d0000004d0000000000000000fb0000000a00640065007000740068000000051d0000004d0000000000000000fb0000000a006400650070007400680000000526000000440000000000000000fb0000000a00640065007000740068000000052b0000003f0000000000000000fb0000000a00640065007000740068000000052b0000003f0000000000000000fb0000000a00640065007000740068000000052f0000003b0000000000000000fb0000000a006400650070007400680000000532000000380000000000000000fb0000000a006400650070007400680000000536000000340000000000000000fb0000000a00640065007000740068000000046b000000d80000000000000000fb0000000a006400650070007400680100000455000000d80000000000000000000000010000010f00000385fc0200000002fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006100000003bfc0100000002fb0000000800540069006d00650000000000000006100000042400fffffffb0000000800540069006d0065010000000000000450000000000000000000000454000004ee00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -6145,9 +2662,9 @@ Window Geometry:
   Tool Properties:
     collapsed: false
   Views:
-    collapsed: false
-  Width: 2488
-  X: 1512
-  Y: 375
+    collapsed: true
+  Width: 1108
+  X: 1124
+  Y: 36
   depth:
     collapsed: false
