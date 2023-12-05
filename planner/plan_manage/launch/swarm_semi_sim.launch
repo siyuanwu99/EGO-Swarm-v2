@@ -34,7 +34,7 @@
     </node>
 
     <!-- Simulation -->
-    <group ns="quad_0">
+    <group ns="quad_1">
         <arg name="drone_id" value="0"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="-9.0"/>
@@ -52,7 +52,7 @@
         </include>
     </group> 
 
-    <group ns="quad_1">
+    <group ns="quad_2">
         <arg name="drone_id" value="1"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="-7.0"/>
@@ -70,7 +70,7 @@
         </include>
     </group> 
 
-    <group ns="quad_2">
+    <group ns="quad_3">
         <arg name="drone_id" value="2"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="-5.0"/>
@@ -88,7 +88,7 @@
         </include>
     </group> 
     
-    <group ns="quad_3">
+    <group ns="quad_4">
         <arg name="drone_id" value="3"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="-3.0"/>
@@ -106,7 +106,7 @@
         </include>
     </group> 
 
-    <group ns="quad_4">
+    <group ns="quad_5">
         <arg name="drone_id" value="4"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="-1.0"/>
@@ -124,7 +124,7 @@
         </include>
     </group> 
 
-    <group ns="quad_5">
+    <group ns="quad_6">
         <arg name="drone_id" value="5"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="1.0"/>
@@ -142,7 +142,7 @@
         </include>
     </group> 
 
-    <group ns="quad_6">
+    <group ns="quad_7">
         <arg name="drone_id" value="6"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="3.0"/>
@@ -160,7 +160,7 @@
         </include>
     </group> 
 
-    <group ns="quad_7">
+    <group ns="quad_8">
         <arg name="drone_id" value="7"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="5.0"/>
@@ -178,7 +178,7 @@
         </include>
     </group> 
 
-    <group ns="quad_8">
+    <group ns="quad_9">
         <arg name="drone_id" value="8"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="7.0"/>
@@ -196,7 +196,7 @@
         </include>
     </group> 
 
-    <group ns="quad_9">
+    <group ns="quad_0">
         <arg name="drone_id" value="9"/>
         <arg name="init_x" value="-15.0"/>
         <arg name="init_y" value="9.0"/>

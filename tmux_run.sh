@@ -94,9 +94,12 @@ load_robots() {
 	working_ips=()
 	working_names=()
 	working_groups=()
-	working_x=()
-	working_y=()
-	working_z=()
+	working_init_x=()
+	working_init_y=()
+	working_init_z=()
+	working_goal_x=()
+	working_goal_y=()
+	working_goal_z=()
 	if [ -f $TEMP_FILE ]; then
 		echo "Loading robots from $TEMP_FILE..."
 		while IFS=, read -r name ip sensor x y z gx gy gz; do
@@ -218,6 +221,29 @@ kill_sessions() {
 				pkill gnome-terminal
 				echo '>> [$name] Gnome terminal killed.'
         exit;
+    	"
+	done
+}
+
+update_code() {
+	# SSH to each working robot
+	length=${#working_ips[@]}
+	for ((i = 0; i < length; i++)); do
+		name=${working_names[$i]}
+		ip=${working_ips[$i]}
+		group=${working_groups[$i]}
+
+		# SSH and tmux session configuration
+		ssh -t "$group@$ip" "
+				echo '[$name] Updating code...'
+				cd ~/ego_swarm_ws/src/ego_planner_v2/
+				git stash
+				git pull
+				git stash pop
+				cd ~/ego_swarm_ws/
+				source devel/setup.zsh
+				catkin_make
+				exit;
     	"
 	done
 

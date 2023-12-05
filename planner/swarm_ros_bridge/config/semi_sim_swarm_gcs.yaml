@@ -28,16 +28,16 @@ IP:
 ## 31xx  drone -> drone
 ## 32xx  ground station -> drone
 send_topics:
-  - topic_name: /broadcast_traj_to_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: self
-    srcPort: 3200
-    max_freq: 200
-  - topic_name: /joystick_from_bridge
-    msg_type: sensor_msgs/Joy
-    srcIP: self
-    srcPort: 3201
-    max_freq: 10
+  # - topic_name: /broadcast_traj_to_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: self
+  #   srcPort: 3200
+  #   max_freq: 200
+  # - topic_name: /joystick_from_bridge
+  #   msg_type: sensor_msgs/Joy
+  #   srcIP: self
+  #   srcPort: 3201
+  #   max_freq: 10
   - topic_name: /traj_start_trigger
     msg_type: geometry_msgs/PoseStamped
     srcIP: self
@@ -149,46 +149,46 @@ send_topics:
 ####### receive these ROS messages from remote robots #######
 ## if no recv_topics needed, comment all these out
 recv_topics:
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone1
-    srcPort: 3100
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone2
-    srcPort: 3100
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone3
-    srcPort: 3100
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone4
-    srcPort: 3100
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone5
-    srcPort: 3100
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone6
-    srcPort: 3100
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone7
-    srcPort: 3100
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone8
-    srcPort: 3100
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone9
-    srcPort: 3100
-  - topic_name: /broadcast_traj_from_planner
-    msg_type: traj_utils/MINCOTraj
-    srcIP: drone10
-    srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone1
+  #   srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone2
+  #   srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone3
+  #   srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone4
+  #   srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone5
+  #   srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone6
+  #   srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone7
+  #   srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone8
+  #   srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone9
+  #   srcPort: 3100
+  # - topic_name: /broadcast_traj_from_planner
+  #   msg_type: traj_utils/MINCOTraj
+  #   srcIP: drone10
+  #   srcPort: 3100
 
   # Visualization
 
