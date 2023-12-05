@@ -24,7 +24,7 @@
     <arg name="drone_id"/>
     <!-- main node -->
     <!-- <node pkg="ego_planner" name="ego_planner_node" type="ego_planner_node" output="screen" launch-prefix="valgrind"> -->
-    <node pkg="ego_planner" name="ego_planner_node" type="ego_planner_node" output="screen">
+    <node pkg="ego_planner" name="ego_planner_node" type="ego_planner_node" output="log">
         <remap from="~odom_world" to="$(arg odometry_topic)"/>
         <remap from="~mandatory_stop" to="/mandatory_stop_to_planner"/>
         <remap from="~planning/trajectory" to = "planning/trajectory"/>
